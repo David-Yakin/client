@@ -1,19 +1,10 @@
 import "./App.css";
-import { Button } from "@mui/material";
-import { Add } from "@mui/icons-material";
+import CardComponent from "./cards/components/Card";
 
 function App() {
   return (
     <div className="App">
-      <h1> app works!</h1>
-      <Button
-        variant="outlined"
-        startIcon={<Add />}
-        sx={{
-          margin: 2,
-        }}>
-        Outlined
-      </Button>
+      <CardComponent />
     </div>
   );
 }
