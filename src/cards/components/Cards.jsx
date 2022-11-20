@@ -3,6 +3,71 @@ import React from "react";
 import CardComponent from "./card/Card";
 
 const Cards = () => {
+  const cards = [
+    {
+      title: "first",
+      subtitle: "subtitle",
+      description: "testing 123",
+      phone: "050-0000000",
+      email: "test@gmail.com",
+      web: "https://www.test.co.il",
+      image: {
+        url: "assets/images/business-card-top-image.jpg",
+        alt: "Business card image",
+      },
+      address: {
+        state: "",
+        country: "country",
+        city: "tel-aviv",
+        street: "Shinkin",
+        houseNumber: 3,
+        zip: "1234",
+      },
+      bizNumber: 1_000_000,
+    },
+    {
+      title: "second",
+      subtitle: "subtitle",
+      description: "testing 123",
+      phone: "050-0000000",
+      email: "test@gmail.com",
+      web: "https://www.test.co.il",
+      image: {
+        url: "assets/images/business-card-top-image.jpg",
+        alt: "Business card image",
+      },
+      address: {
+        state: "",
+        country: "country",
+        city: "tel-aviv",
+        street: "Shinkin",
+        houseNumber: 3,
+        zip: "1234",
+      },
+      bizNumber: 1_000_000,
+    },
+    {
+      title: "third",
+      subtitle: "subtitle",
+      description: "testing 123",
+      phone: "050-0000000",
+      email: "test@gmail.com",
+      web: "https://www.test.co.il",
+      image: {
+        url: "assets/images/business-card-top-image.jpg",
+        alt: "Business card image",
+      },
+      address: {
+        state: "",
+        country: "country",
+        city: "tel-aviv",
+        street: "Shinkin",
+        houseNumber: 3,
+        zip: "1234",
+      },
+      bizNumber: 1_000_000,
+    },
+  ];
   return (
     <Container>
       <Stack
@@ -11,7 +76,9 @@ const Cards = () => {
         my={2}
         flexWrap="wrap"
         justifyContent="center">
-        <CardComponent />
+        {cards.map((card, i) => (
+          <CardComponent key={i} card={card} />
+        ))}
       </Stack>
     </Container>
   );
