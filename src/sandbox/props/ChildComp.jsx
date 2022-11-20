@@ -1,5 +1,6 @@
 import { Typography, Box } from "@mui/material";
 import React from "react";
+import Button from "@mui/material/Button";
 
 // const ChildComp = props => {
 //   const { string } = props;
@@ -66,23 +67,31 @@ import React from "react";
 // };
 
 /***** receives two props *****/
-const ChildComp = ({ first, last }) => {
+// const ChildComp = ({ first, last }) => {
+//   return (
+//     <>
+//       <Box
+//         sx={{
+//           backgroundColor: "primary.dark",
+//           width: 100,
+//           height: 100,
+//           "&:hover": {
+//             backgroundColor: "primary.main",
+//             opacity: [0.9, 0.8, 0.7],
+//           },
+//         }}>
+//         <Typography>{first}</Typography>
+//         <Typography>{last}</Typography>
+//       </Box>
+//     </>
+//   );
+// };
+
+const ChildComp = ({ handleClick }) => {
   return (
-    <>
-      <Box
-        sx={{
-          backgroundColor: "primary.dark",
-          width: 100,
-          height: 100,
-          "&:hover": {
-            backgroundColor: "primary.main",
-            opacity: [0.9, 0.8, 0.7],
-          },
-        }}>
-        <Typography>{first}</Typography>
-        <Typography>{last}</Typography>
-      </Box>
-    </>
+    <Button onClick={handleClick} variant="contained">
+      click me!
+    </Button>
   );
 };
 

@@ -44,7 +44,7 @@ const Cards = () => {
         houseNumber: 3,
         zip: "1234",
       },
-      bizNumber: 1_000_000,
+      bizNumber: 2_000_000,
     },
     {
       title: "third",
@@ -65,10 +65,13 @@ const Cards = () => {
         houseNumber: 3,
         zip: "1234",
       },
-      bizNumber: 1_000_000,
+      bizNumber: 3_000_000,
     },
   ];
   // const cards = [];
+
+  const handleCardDelete = bizNumber =>
+    console.log(`You deleted card no: ${bizNumber}`);
 
   if (!cards.length)
     return (
@@ -85,7 +88,11 @@ const Cards = () => {
         flexWrap="wrap"
         justifyContent="center">
         {cards.map((card, i) => (
-          <CardComponent key={i} card={card} />
+          <CardComponent
+            key={i}
+            card={card}
+            handleCardDelete={handleCardDelete}
+          />
         ))}
       </Stack>
     </Container>

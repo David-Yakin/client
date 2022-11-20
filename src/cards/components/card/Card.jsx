@@ -5,14 +5,17 @@ import CardHead from "./CardHead";
 import CardBody from "./CardBody";
 import CardActionBar from "./CardActionBar";
 
-const CardComponent = ({ card }) => {
+const CardComponent = ({ card, handleCardDelete }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardHead image={card.image} />
         <CardBody card={card} />
       </CardActionArea>
-      <CardActionBar />
+      <CardActionBar
+        handleCardDelete={handleCardDelete}
+        bizNumber={card.bizNumber}
+      />
     </Card>
   );
 };
