@@ -1,10 +1,12 @@
 import "./App.css";
-import CardComponent from "./cards/components/Card";
+// import Cards from "./cards/components/Cards";
+import Sandbox from "./sandbox/Sandbox";
 
 function App() {
   return (
     <div className="App">
-      <CardComponent />
+      {/* <Cards /> */}
+      <Sandbox />
     </div>
   );
 }
