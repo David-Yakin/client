@@ -2,8 +2,8 @@
 
 ## Presentation
 
-1. [ ] **propTypes**
-2. [ ] **events in component**
+1. [ ] **events in component**
+2. [ ] **propTypes**
 3. [ ] **component in component**
 4. [ ] **useState**
 5. [ ] **useEffect**
@@ -50,9 +50,10 @@
 46. [ ] **like card**
 47. [ ] **my fav cards**
 48. [ ] **card details**
-49. [x] **props in component**
-50. [x] **iterations in component (map)**
-51. [x] **styles in the presentation**
-52. [x] **Compile Error - returning an element without wrapping it**
-53. [x] **React Fragment**
-54. [x] **string interpolations**
+49. [x] **Conditional Rendering**
+50. [x] **props in component**
+51. [x] **iterations in component (map)**
+52. [x] **styles in the presentation**
+53. [x] **Compile Error - returning an element without wrapping it**
+54. [x] **React Fragment**
+55. [x] **string interpolations**

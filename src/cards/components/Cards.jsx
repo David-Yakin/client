@@ -1,4 +1,4 @@
-import { Container, Stack } from "@mui/material";
+import { Container, Stack, Typography } from "@mui/material";
 import React from "react";
 import CardComponent from "./card/Card";
 
@@ -68,6 +68,14 @@ const Cards = () => {
       bizNumber: 1_000_000,
     },
   ];
+  // const cards = [];
+
+  if (!cards.length)
+    return (
+      <Typography m={2}>
+        Oops... it seems there are no business cards to display
+      </Typography>
+    );
   return (
     <Container>
       <Stack
