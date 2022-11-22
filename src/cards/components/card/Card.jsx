@@ -4,6 +4,8 @@ import { CardActionArea } from "@mui/material";
 import CardHead from "./CardHead";
 import CardBody from "./CardBody";
 import CardActionBar from "./CardActionBar";
+import cardType from "../../models/types/cardType";
+import { func } from "prop-types";
 
 const CardComponent = ({ card, handleCardDelete }) => {
   return (
@@ -18,6 +20,11 @@ const CardComponent = ({ card, handleCardDelete }) => {
       />
     </Card>
   );
+};
+
+CardComponent.propTypes = {
+  card: cardType.isRequired,
+  handleCardDelete: func.isRequired,
 };
 
 export default CardComponent;

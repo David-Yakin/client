@@ -5,6 +5,7 @@ import CardComponent from "./card/Card";
 const Cards = () => {
   const cards = [
     {
+      _id: "63765801e20ed868a69a62c4",
       title: "first",
       subtitle: "subtitle",
       description: "testing 123",
@@ -21,11 +22,13 @@ const Cards = () => {
         city: "tel-aviv",
         street: "Shinkin",
         houseNumber: 3,
-        zip: "1234",
+        zip: 1234,
       },
       bizNumber: 1_000_000,
+      user_id: "63765801e20ed868a69a62c2",
     },
     {
+      _id: "63765801e20ed868a69a62c4",
       title: "second",
       subtitle: "subtitle",
       description: "testing 123",
@@ -42,11 +45,13 @@ const Cards = () => {
         city: "tel-aviv",
         street: "Shinkin",
         houseNumber: 3,
-        zip: "1234",
+        zip: 1234,
       },
       bizNumber: 2_000_000,
+      user_id: "63765801e20ed868a69a62c2",
     },
     {
+      _id: "63765801e20ed868a69a62c4",
       title: "third",
       subtitle: "subtitle",
       description: "testing 123",
@@ -63,11 +68,13 @@ const Cards = () => {
         city: "tel-aviv",
         street: "Shinkin",
         houseNumber: 3,
-        zip: "1234",
+        zip: 1234,
       },
       bizNumber: 3_000_000,
+      user_id: "63765801e20ed868a69a62c2",
     },
   ];
+
   // const cards = [];
 
   const handleCardDelete = bizNumber =>

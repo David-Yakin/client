@@ -5,6 +5,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import Box from "@mui/material/Box";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ModeEditIcon from "@mui/icons-material/ModeEdit";
+import { func, number } from "prop-types";
 
 const CardActionBar = ({ handleCardDelete, bizNumber }) => {
   return (
@@ -30,6 +31,11 @@ const CardActionBar = ({ handleCardDelete, bizNumber }) => {
       </IconButton>
     </CardActions>
   );
+};
+
+CardActionBar.propTypes = {
+  bizNumber: number.isRequired,
+  handleCardDelete: func.isRequired,
 };
 
 export default CardActionBar;

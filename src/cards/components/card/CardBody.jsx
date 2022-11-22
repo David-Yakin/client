@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import CardHeader from "@mui/material/CardHeader";
 import Box from "@mui/material/Box";
+import cardType from "../../models/types/cardType";
 
 const CardBody = ({ card }) => {
   const {
@@ -34,6 +35,10 @@ const CardBody = ({ card }) => {
       </CardContent>
     </>
   );
+};
+
+CardBody.propTypes = {
+  card: cardType.isRequired,
 };
 
 export default CardBody;
