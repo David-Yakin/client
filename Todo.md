@@ -2,7 +2,7 @@
 
 ## Presentation
 
-1. [ ] **propTypes & page header component**
+1. [ ] **page header component**
 2. [ ] **layout**
 3. [ ] **static public folder - get images & about Page**
 4. [ ] **component in component**
@@ -49,11 +49,18 @@
 45. [ ] **like card**
 46. [ ] **my fav cards**
 47. [ ] **card details**
-48. [x] **events in component**
-49. [x] **Conditional Rendering**
-50. [x] **props in component**
-51. [x] **iterations in component (map)**
-52. [x] **styles in the presentation**
-53. [x] **Compile Error - returning an element without wrapping it**
-54. [x] **React Fragment**
-55. [x] **string interpolations**
+48. [x] **propTypes**
+49. [x] **events in component**
+50. [x] **Conditional Rendering**
+51. [x] **props in component**
+52. [x] **iterations in component (map)**
+53. [x] **styles in the presentation**
+54. [x] **Compile Error - returning an element without wrapping it**
+55. [x] **React Fragment**
+56. [x] **string interpolations**
+
+## MUI
+
+1.  [ ] **Layout**
+2.  [ ] **navigation**
+3.  [ ] **Form & Inputs**

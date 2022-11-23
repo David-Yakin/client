@@ -9,7 +9,7 @@ import { func } from "prop-types";
 
 const CardComponent = ({ card, handleCardDelete }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ minWidth: 280 }}>
       <CardActionArea>
         <CardHead image={card.image} />
         <CardBody card={card} />

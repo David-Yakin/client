@@ -1,4 +1,4 @@
-import { Container, Stack, Typography } from "@mui/material";
+import { Container, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import CardComponent from "./card/Card";
 
@@ -87,21 +87,14 @@ const Cards = () => {
       </Typography>
     );
   return (
-    <Container>
-      <Stack
-        gap={2}
-        direction="row"
-        my={2}
-        flexWrap="wrap"
-        justifyContent="center">
+    <Container sx={{ mt: 2 }}>
+      <Grid container spacing={2}>
         {cards.map((card, i) => (
-          <CardComponent
-            key={i}
-            card={card}
-            handleCardDelete={handleCardDelete}
-          />
+          <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
+            <CardComponent card={card} handleCardDelete={handleCardDelete} />
+          </Grid>
         ))}
-      </Stack>
+      </Grid>
     </Container>
   );
 };
