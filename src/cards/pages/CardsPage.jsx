@@ -76,7 +76,6 @@ const CardsPage = () => {
     },
   ];
 
-  // const cards = [];
   return (
     <Container sx={{ mt: 2 }}>
       <PageHeader

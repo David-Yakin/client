@@ -1,15 +1,18 @@
 import "./App.css";
 import CardsPage from "./cards/pages/CardsPage";
-// import Sandbox from "./sandbox/Sandbox";
+import Layout from "./layout/Layout";
 
 function App() {
   return (
     <div className="App">
-      <CardsPage />
-
-      {/* <Sandbox /> */}
+      <Layout>
+        <CardsPage />
+      </Layout>
     </div>
   );
 }
 
 export default App;
+
+// import Sandbox from "./sandbox/Sandbox";
+/* <Sandbox /> */
