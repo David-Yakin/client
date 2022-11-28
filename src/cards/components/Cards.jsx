@@ -16,7 +16,7 @@ const Cards = ({ cards }) => {
     );
 
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} pb={2}>
       {cards.map((card, i) => (
         <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
           <CardComponent card={card} handleCardDelete={handleCardDelete} />

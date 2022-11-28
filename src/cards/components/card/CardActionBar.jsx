@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import { func, number } from "prop-types";
+import CallIcon from "@mui/icons-material/Call";
 
 const CardActionBar = ({ handleCardDelete, bizNumber }) => {
   return (
@@ -24,11 +25,19 @@ const CardActionBar = ({ handleCardDelete, bizNumber }) => {
           <ModeEditIcon />
         </IconButton>
       </Box>
-      <IconButton
-        aria-label="add to favorites"
-        onClick={() => console.log(`You Liked card no: ${bizNumber}`)}>
-        <FavoriteIcon />
-      </IconButton>
+
+      <Box>
+        <IconButton
+          aria-label="call business"
+          onClick={() => console.log(`You called card no: ${bizNumber}`)}>
+          <CallIcon />
+        </IconButton>
+        <IconButton
+          aria-label="add to favorites"
+          onClick={() => console.log(`You Liked card no: ${bizNumber}`)}>
+          <FavoriteIcon />
+        </IconButton>
+      </Box>
     </CardActions>
   );
 };

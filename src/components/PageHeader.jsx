@@ -2,10 +2,11 @@ import React from "react";
 import { string } from "prop-types";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
+import Box from "@mui/material/Box";
 
 const PageHeader = ({ title, subtitle }) => {
   return (
-    <>
+    <Box pt={2}>
       <Typography variant="h2" component="h1">
         {title}
       </Typography>
@@ -13,7 +14,7 @@ const PageHeader = ({ title, subtitle }) => {
         {subtitle}
       </Typography>
       <Divider sx={{ my: 2 }} />
-    </>
+    </Box>
   );
 };
 

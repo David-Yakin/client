@@ -2,12 +2,12 @@
 
 ## Presentation
 
-1. [ ] **CardsPage**
-2. [ ] **page header component**
-3. [ ] **layout**
-4. [ ] **component in component**
-5. [ ] **NavBar**
-6. [ ] **Footer**
+1. [x] **CardsPage**
+2. [x] **page header component**
+3. [x] **layout**
+4. [x] **children**
+5. [x] **NavBar**
+6. [x] **Footer**
 
 7. [ ] **static public folder - get images & about Page**
 8. [ ] **react router dom**

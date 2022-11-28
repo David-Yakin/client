@@ -74,13 +74,36 @@ const CardsPage = () => {
       bizNumber: 3_000_000,
       user_id: "63765801e20ed868a69a62c2",
     },
+    {
+      _id: "63765801e20ed868a69a62c4",
+      title: "forth",
+      subtitle: "subtitle",
+      description: "testing 123",
+      phone: "050-0000000",
+      email: "test@gmail.com",
+      web: "https://www.test.co.il",
+      image: {
+        url: "assets/images/business-card-top-image.jpg",
+        alt: "Business card image",
+      },
+      address: {
+        state: "",
+        country: "country",
+        city: "tel-aviv",
+        street: "Shinkin",
+        houseNumber: 3,
+        zip: 1234,
+      },
+      bizNumber: 4_000_000,
+      user_id: "63765801e20ed868a69a62c2",
+    },
   ];
 
   return (
-    <Container sx={{ mt: 2 }}>
+    <Container>
       <PageHeader
         title="Cards"
-        subtitle="On this page you can find all business cards from all categories"
+        subtitle="Here you can find business cards from all categories"
       />
 
       <Cards cards={cards} />
