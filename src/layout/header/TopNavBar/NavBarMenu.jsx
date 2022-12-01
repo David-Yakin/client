@@ -1,6 +1,8 @@
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Box from "@mui/material/Box";
+import NavBarLink from "./../../../routes/NavBarLink";
+import ROUTES from "./../../../routes/routesModel";
 
 export const NavBarMenu = ({ isMenuOpen, anchorEl, onCloseMenu, user }) => {
   return (
@@ -19,11 +21,13 @@ export const NavBarMenu = ({ isMenuOpen, anchorEl, onCloseMenu, user }) => {
       }}>
       {!user && (
         <Box>
-          <MenuItem
-            sx={{ display: { xs: "block", md: "none" } }}
-            onClick={onCloseMenu}>
-            Login
-          </MenuItem>
+          <NavBarLink to={ROUTES.LOGIN}>
+            <MenuItem
+              sx={{ display: { xs: "block", md: "none" } }}
+              onClick={onCloseMenu}>
+              Login
+            </MenuItem>
+          </NavBarLink>
           <MenuItem
             sx={{ display: { xs: "block", md: "none" } }}
             onClick={onCloseMenu}>
@@ -35,8 +39,13 @@ export const NavBarMenu = ({ isMenuOpen, anchorEl, onCloseMenu, user }) => {
       {user && (
         <Box>
           <MenuItem onClick={onCloseMenu}>Logout</MenuItem>
-          <MenuItem onClick={onCloseMenu}>Profile</MenuItem>
-          <MenuItem onClick={onCloseMenu}>Edit account</MenuItem>
+
+          <NavBarLink to={ROUTES.USER_PROFILE} color="#000">
+            <MenuItem onClick={onCloseMenu}>Profile</MenuItem>
+          </NavBarLink>
+          <NavBarLink to={ROUTES.EDIT_USER} color="#000">
+            <MenuItem onClick={onCloseMenu}>Edit account</MenuItem>
+          </NavBarLink>
         </Box>
       )}
     </Menu>

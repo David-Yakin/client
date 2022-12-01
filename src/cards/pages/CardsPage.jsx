@@ -7,12 +7,12 @@ const CardsPage = () => {
   const cards = [
     {
       _id: "63765801e20ed868a69a62c4",
-      title: "first",
+      title: "title",
       subtitle: "subtitle",
-      description: "testing 123",
+      description: "business description",
       phone: "050-0000000",
-      email: "test@gmail.com",
-      web: "https://www.test.co.il",
+      email: "card@gmail.com",
+      web: "https://www.bcard.co.il",
       image: {
         url: "assets/images/business-card-top-image.jpg",
         alt: "Business card image",

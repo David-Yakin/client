@@ -2,83 +2,84 @@
 
 ## Presentation
 
-1. [x] **CardsPage**
-2. [x] **page header component**
-3. [x] **layout**
-4. [x] **children**
-5. [x] **NavBar**
-6. [x] **Footer**
+1.  [x] **propTypes**
+2.  [x] **events in component**
+3.  [x] **Conditional Rendering**
+4.  [x] **props in component**
+5.  [x] **iterations in component (map)**
+6.  [x] **styles in the presentation**
+7.  [x] **Compile Error - returning an element without wrapping it**
+8.  [x] **React Fragment**
+9.  [x] **string interpolations**
 
-7. [ ] **static public folder - get images & about Page**
-8. [ ] **react router dom**
-9. [ ] **Link & navLink**
-10. [ ] **nav bar**
-11. [ ] **routes model**
+10. [x] **CardsPage**
+11. [x] **page header component**
+12. [x] **layout**
+13. [x] **children**
+14. [x] **useState**
+15. [x] **NavBar**
+16. [x] **Footer**
 
-12. [ ] **useState**
-13. [ ] **getCards**
-14. [ ] **cardEndPointService**
-15. [ ] **axios**
-16. [ ] **axios interceptors**
+17. [x] **static folder - get images & about Page**
+18. [x] **ErrorPage 404**
+19. [x] **react router dom**
+20. [x] **Link & navLink**
+21. [ ] **nav bar**
+22. [x] **routes model**
 
-17. [ ] **react-router-dom navigator**
-18. [ ] **CardDetails**
-19. [ ] **useParams react-router-dom hook**
+23. [ ] **react-router-dom navigator**
+24. [ ] **CardDetails**
+25. [ ] **useParams react-router-dom hook**
 
-20. [ ] **React Lifecycle Hooks**
-21. [ ] **useEffect**
-22. [ ] **useMemo**
-23. [ ] **useCallback**
-24. [ ] **custom hooks**
+26. [ ] **React Lifecycle Hooks**
+27. [ ] **useEffect**
+28. [ ] **getCards**
+29. [ ] **cardEndPointService**
+30. [ ] **axios**
+31. [ ] **axios interceptors**
 
-25. [ ] **Forms in react & material-UI**
-26. [ ] **mui textField**
-27. [ ] **useForm**
-28. [ ] **Joi client side**
-29. [ ] **handle Submit**
-30. [ ] **reset Form**
-31. [ ] **react toastify or Snackbar mui**
-32. [ ] **login**
-33. [ ] **localStorage service**
-34. [ ] **get current user**
-35. [ ] **Provider & useProvider**
-36. [ ] **logout**
-37. [ ] **jwt authorization client side**
+32. [ ] **useMemo**
+33. [ ] **useCallback**
+34. [ ] **custom hooks**
 
-38. [ ] **create card**
+35. [ ] **Forms in react & material-UI**
+36. [ ] **mui textField**
+37. [ ] **useForm**
+38. [ ] **Joi client side**
+39. [ ] **handle Submit**
+40. [ ] **reset Form**
+41. [ ] **react toastify or Snackbar mui**
+42. [ ] **login**
+43. [ ] **localStorage service**
+44. [ ] **get current user**
+45. [ ] **Provider & useProvider**
+46. [ ] **logout**
+47. [ ] **jwt authorization client side**
 
-39. [ ] **biz signUp**
-40. [ ] **progress bar**
-41. [ ] **payment method**
-42. [ ] **create new business card**
-43. [ ] **my cards**
+48. [ ] **create card**
 
-44. [ ] **delete card**
-45. [ ] **swal or Dialog in mui**
-46. [ ] **handleDelete card**
+49. [ ] **biz signUp**
+50. [ ] **progress bar**
+51. [ ] **payment method**
+52. [ ] **create new business card**
+53. [ ] **my cards**
 
-47. [ ] **edit card**
-48. [ ] **map to model**
+54. [ ] **delete card**
+55. [ ] **swal or Dialog in mui**
+56. [ ] **handleDelete card**
 
-49. [ ] **like card**
-50. [ ] **my fav cards**
+57. [ ] **edit card**
+58. [ ] **map to model**
 
-51. [ ] **search bar**
-52. [ ] **loader or Backdrop or Progress in mui**
-53. [ ] **display mode & toggle button in mui**
-54. [ ] **.ENV**
+59. [ ] **like card**
+60. [ ] **my fav cards**
 
-55. [ ] **tests**
+61. [ ] **search bar**
+62. [ ] **loader or Backdrop or Progress in mui**
+63. [ ] **display mode & toggle button in mui**
+64. [ ] **.ENV**
 
-56. [x] **propTypes**
-57. [x] **events in component**
-58. [x] **Conditional Rendering**
-59. [x] **props in component**
-60. [x] **iterations in component (map)**
-61. [x] **styles in the presentation**
-62. [x] **Compile Error - returning an element without wrapping it**
-63. [x] **React Fragment**
-64. [x] **string interpolations**
+65. [ ] **tests**
 
 ## MUI
 

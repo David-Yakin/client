@@ -1,16 +1,16 @@
 // import React from "react";
 // import Loops from "./Loops";
-// import FatherComp from "./props/FatherComp";
+import FatherComp from "./props/FatherComp";
 // import OnClick from "./events/OnClick";
-import FatherPropTypes from "./propTypes/FatherPropTypes";
+// import FatherPropTypes from "./propTypes/FatherPropTypes";
 
 const Sandbox = () => {
   return (
     <>
-      {/* <FatherComp /> */}
+      <FatherComp />
       {/* <Loops /> */}
       {/* <OnClick /> */}
-      <FatherPropTypes />
+      {/* <FatherPropTypes /> */}
     </>
   );
 };
