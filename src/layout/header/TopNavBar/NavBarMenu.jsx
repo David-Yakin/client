@@ -28,11 +28,13 @@ export const NavBarMenu = ({ isMenuOpen, anchorEl, onCloseMenu, user }) => {
               Login
             </MenuItem>
           </NavBarLink>
-          <MenuItem
-            sx={{ display: { xs: "block", md: "none" } }}
-            onClick={onCloseMenu}>
-            SignUp
-          </MenuItem>
+          <NavBarLink to={ROUTES.SIGNUP} color="#000">
+            <MenuItem
+              sx={{ display: { xs: "block", md: "none" } }}
+              onClick={onCloseMenu}>
+              SignUp
+            </MenuItem>
+          </NavBarLink>
         </Box>
       )}
 

@@ -5,12 +5,14 @@ import AboutPage from "./../pages/AboutPage";
 import ErrorPage from "./../pages/ErrorPage";
 import Sandbox from "./../sandbox/Sandbox";
 import ROUTES from "./routesModel";
+import SignupPage from "./../users/pages/SignupPage";
 
 const Router = () => {
   return (
     <Routes>
       <Route path={ROUTES.CARDS} element={<CardsPage />} />
       <Route path={ROUTES.ABOUT} element={<AboutPage />} />
+      <Route path={ROUTES.SIGNUP} element={<SignupPage />} />
       <Route path="/sandbox" element={<Sandbox />} />
       <Route path="*" element={<ErrorPage />} />
     </Routes>

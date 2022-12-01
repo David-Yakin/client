@@ -6,11 +6,11 @@ import Paper from "@mui/material/Paper";
 import InfoIcon from "@mui/icons-material/Info";
 import PortraitIcon from "@mui/icons-material/Portrait";
 import ROUTES from "./../../routes/routesModel";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
-  const navigateTo = to => {
-    console.log(`navigate to: ${to}`);
-  };
+  const navigate = useNavigate();
+  const navigateTo = to => navigate(to);
 
   return (
     <Paper
