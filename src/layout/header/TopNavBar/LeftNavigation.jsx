@@ -16,6 +16,7 @@ export const LeftNavigation = () => {
         <NavItem label="About" to={ROUTES.ABOUT} />
         <NavItem label="My Cards" to={ROUTES.MY_CARDS} />
         <NavItem label="Fav Cards" to={ROUTES.FAV_CARDS} />
+        <NavItem label="sandbox" to="/sandbox" />
       </Box>
     </Box>
   );

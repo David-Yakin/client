@@ -1,6 +1,6 @@
 # Todo client side
 
-## Presentation
+## Presentation & code
 
 1.  [x] **propTypes**
 2.  [x] **events in component**
@@ -28,60 +28,64 @@
 22. [x] **routes model**
 23. [x] **useNavigate**
 
-24. [ ] **react-router-dom navigator**
-25. [ ] **bottom nav**
-26. [ ] **CardDetails**
-27. [ ] **useParams react-router-dom hook**
+24. [x] **react-router-dom navigator**
+25. [x] **bottom nav**
+26. [x] **CardDetails**
+27. [x] **useParams react-router-dom hook**
 
 28. [ ] **React Lifecycle Hooks**
 29. [ ] **useEffect**
-30. [ ] **getCards**
-31. [ ] **cardEndPointService**
-32. [ ] **axios**
-33. [ ] **axios interceptors**
 
-34. [ ] **useMemo**
-35. [ ] **useCallback**
-36. [ ] **custom hooks**
+30. [ ] **custom hooks**
+31. [ ] **useMemo**
+32. [ ] **useCallback**
 
-37. [ ] **Forms in react & material-UI**
-38. [ ] **mui textField**
-39. [ ] **useForm**
-40. [ ] **Joi client side**
-41. [ ] **handle Submit**
-42. [ ] **reset Form**
-43. [ ] **react toastify or Snackbar mui**
-44. [ ] **login**
-45. [ ] **localStorage service**
-46. [ ] **get current user**
-47. [ ] **Provider & useProvider**
-48. [ ] **logout**
-49. [ ] **jwt authorization client side**
+33. [ ] **axios**
+34. [ ] **axios interceptors - useAxios - שיפעיל את הקוד במודול כך שהמיירתים יפעלו**
+35. [ ] **cardEndPointService**
+36. [ ] **useCards - getCards**
+37. [ ] **getCards in CardsPage.jsx**
 
-50. [ ] **create card**
+38. [ ] **Forms in react & material-UI**
+39. [ ] **mui textField**
+40. [ ] **signup**
+41. [ ] **useForm**
+42. [ ] **Joi client side**
+43. [ ] **handle Submit**
+44. [ ] **reset Form**
+45. [ ] **react toastify or Snackbar mui**
 
-51. [ ] **biz signUp**
-52. [ ] **progress bar**
-53. [ ] **payment method**
-54. [ ] **create new business card**
-55. [ ] **my cards**
+46. [ ] **login**
+47. [ ] **jwt authorization client side**
+48. [ ] **localStorage service**
+49. [ ] **get current user**
+50. [ ] **Provider & useProvider**
+51. [ ] **logout**
 
-56. [ ] **delete card**
-57. [ ] **swal or Dialog in mui**
-58. [ ] **handleDelete card**
+52. [ ] **create card**
 
-59. [ ] **edit card**
-60. [ ] **map to model**
+53. [ ] **biz signUp**
+54. [ ] **progress bar**
+55. [ ] **payment method**
+56. [ ] **create new business card**
+57. [ ] **my cards**
 
-61. [ ] **like card**
-62. [ ] **my fav cards**
+58. [ ] **delete card**
+59. [ ] **swal or Dialog in mui**
+60. [ ] **handleDelete card**
 
-63. [ ] **search bar**
-64. [ ] **loader or Backdrop or Progress in mui**
-65. [ ] **display mode & toggle button in mui**
-66. [ ] **.ENV**
+61. [ ] **edit card**
+62. [ ] **map to model**
 
-67. [ ] **tests**
+63. [ ] **like card**
+64. [ ] **my fav cards**
+
+65. [ ] **search bar**
+66. [ ] **loader or Backdrop or Progress in mui**
+67. [ ] **display mode & toggle button in mui**
+68. [ ] **.ENV**
+
+69. [ ] **tests**
 
 ## MUI
 
