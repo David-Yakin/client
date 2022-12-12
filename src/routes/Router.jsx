@@ -11,6 +11,7 @@ import CardDetailsPage from "./../cards/pages/CardDetailsPage";
 const Router = () => {
   return (
     <Routes>
+      <Route path={ROUTES.ROOT} element={<CardsPage />} />
       <Route path={ROUTES.ABOUT} element={<AboutPage />} />
       <Route path={ROUTES.CARDS} element={<CardsPage />} />
       <Route path={`${ROUTES.CARD_INFO}/:id`} element={<CardDetailsPage />} />

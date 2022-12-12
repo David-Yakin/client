@@ -1,103 +1,28 @@
-import React from "react";
 import Container from "@mui/material/Container";
 import Cards from "./../components/Cards";
 import PageHeader from "../../components/PageHeader";
+import { useEffect, useState } from "react";
+import { getCards } from "./../services/cardService";
+import Error from "../../components/Error";
+import Spinner from "../../components/Spinner";
 
 const CardsPage = () => {
-  const cards = [
-    {
-      _id: "63765801e20ed868a69a62c4",
-      title: "title",
-      subtitle: "subtitle",
-      description: "business description",
-      phone: "050-0000000",
-      email: "card@gmail.com",
-      web: "https://www.bcard.co.il",
-      image: {
-        url: "assets/images/business-card-top-image.jpg",
-        alt: "Business card image",
-      },
-      address: {
-        state: "",
-        country: "country",
-        city: "tel-aviv",
-        street: "Shinkin",
-        houseNumber: 3,
-        zip: 1234,
-      },
-      bizNumber: 1_000_000,
-      user_id: "63765801e20ed868a69a62c2",
-    },
-    {
-      _id: "63765801e20ed868a69a62c4",
-      title: "second",
-      subtitle: "subtitle",
-      description: "testing 123",
-      phone: "050-0000000",
-      email: "test@gmail.com",
-      web: "https://www.test.co.il",
-      image: {
-        url: "assets/images/business-card-top-image.jpg",
-        alt: "Business card image",
-      },
-      address: {
-        state: "",
-        country: "country",
-        city: "tel-aviv",
-        street: "Shinkin",
-        houseNumber: 3,
-        zip: 1234,
-      },
-      bizNumber: 2_000_000,
-      user_id: "63765801e20ed868a69a62c2",
-    },
-    {
-      _id: "63765801e20ed868a69a62c4",
-      title: "third",
-      subtitle: "subtitle",
-      description: "testing 123",
-      phone: "050-0000000",
-      email: "test@gmail.com",
-      web: "https://www.test.co.il",
-      image: {
-        url: "assets/images/business-card-top-image.jpg",
-        alt: "Business card image",
-      },
-      address: {
-        state: "",
-        country: "country",
-        city: "tel-aviv",
-        street: "Shinkin",
-        houseNumber: 3,
-        zip: 1234,
-      },
-      bizNumber: 3_000_000,
-      user_id: "63765801e20ed868a69a62c2",
-    },
-    {
-      _id: "63765801e20ed868a69a62c4",
-      title: "forth",
-      subtitle: "subtitle",
-      description: "testing 123",
-      phone: "050-0000000",
-      email: "test@gmail.com",
-      web: "https://www.test.co.il",
-      image: {
-        url: "assets/images/business-card-top-image.jpg",
-        alt: "Business card image",
-      },
-      address: {
-        state: "",
-        country: "country",
-        city: "tel-aviv",
-        street: "Shinkin",
-        houseNumber: 3,
-        zip: 1234,
-      },
-      bizNumber: 4_000_000,
-      user_id: "63765801e20ed868a69a62c2",
-    },
-  ];
+  const [cards, setCards] = useState();
+  const [error, setError] = useState(null);
+  const [isPending, setPending] = useState(false);
+
+  useEffect(() => {
+    setPending(true);
+    getCards()
+      .then(data => {
+        setPending(false);
+        setCards(data);
+      })
+      .catch(error => {
+        setPending(false);
+        setError(error);
+      });
+  }, []);
 
   return (
     <Container>
@@ -105,10 +30,37 @@ const CardsPage = () => {
         title="Cards"
         subtitle="Here you can find business cards from all categories"
       />
-
-      <Cards cards={cards} />
+      {isPending && <Spinner />}
+      {error && <Error errorMessage={error} />}
+      {cards && !!cards.length && <Cards cards={cards} />}
     </Container>
   );
 };
 
 export default CardsPage;
+
+// import useCards from "./../hooks/useCards";
+// import Container from "@mui/material/Container";
+// import Cards from "./../components/Cards";
+// import PageHeader from "../../components/PageHeader";
+// import { useEffect } from "react";
+
+// const CardsPage = () => {
+//   const { cards, handleGetCards } = useCards();
+
+//   useEffect(() => {
+//     handleGetCards();
+//   }, []);
+
+//   return (
+//     <Container>
+//       <PageHeader
+//         title="Cards"
+//         subtitle="Here you can find business cards from all categories"
+//       />
+//       {cards && !!cards.length && <Cards cards={cards} />}
+//     </Container>
+//   );
+// };
+
+// export default CardsPage;
