@@ -40,55 +40,59 @@
 31. [x] **useCallback**
 32. [x] **useMemo**
 
-33. [ ] **axios**
-34. [ ] **axios interceptors - useAxios - שיפעיל את הקוד במודול כך שהמיירתים יפעלו**
-35. [ ] **cardService**
-36. [ ] **useCards**
-37. [ ] **getCards in CardsPage.jsx**
-38. [ ] **getCard in CardsDetailsPage.jsx**
-39. [ ] **react toastify or Snackbar mui**
+33. [x] **axios**
+34. [x] **cardService**
+35. [x] **getCards in CardsPage.jsx**
+36. [x] **Progress - mui spinner**
+37. [x] **Error component - for handling response error**
+38. [ ] **useCards**
+39. [ ] **getCard in CardsDetailsPage.jsx**
 
-40. [ ] **Forms in react & material-UI**
-41. [ ] **mui textField**
-42. [ ] **signup**
-43. [ ] **useForm**
-44. [ ] **Joi client side**
-45. [ ] **handle Submit**
-46. [ ] **reset Form**
+40. [ ] **useContext**
+41. [ ] **axios interceptors - useAxios**
+42. [ ] **react toastify or Snackbar mui**
 
-47. [ ] **login**
-48. [ ] **jwt authorization client side**
-49. [ ] **localStorage service**
-50. [ ] **get current user**
-51. [ ] **Provider & useProvider**
-52. [ ] **logout**
-53. [ ] **useRef - 3 failed attempts**
-54. [ ] **useRef - focus on input**
+43. [ ] **Forms in react & material-UI**
+44. [ ] **mui textField**
+45. [ ] **signup**
+46. [ ] **useForm**
+47. [ ] **Joi client side**
+48. [ ] **handle Submit**
+49. [ ] **reset Form**
 
-55. [ ] **create card**
+50. [ ] **login**
+51. [ ] **jwt authorization client side**
+52. [ ] **localStorage service**
+53. [ ] **get current user**
+54. [ ] **Provider & useProvider - userProvider**
+55. [ ] **logout**
+56. [ ] **useRef - 3 failed attempts**
+57. [ ] **useRef - focus on input**
 
-56. [ ] **biz signUp**
-57. [ ] **progress bar**
-58. [ ] **payment method**
-59. [ ] **create new business card**
-60. [ ] **my cards**
+58. [ ] **create card**
 
-61. [ ] **delete card**
-62. [ ] **swal or Dialog in mui**
-63. [ ] **handleDelete card**
+59. [ ] **biz signUp**
+60. [ ] **progress bar**
+61. [ ] **payment method**
+62. [ ] **create new business card**
+63. [ ] **my cards**
 
-64. [ ] **edit card**
-65. [ ] **map to model**
+64. [ ] **delete card**
+65. [ ] **swal or Dialog in mui**
+66. [ ] **handleDelete card**
 
-66. [ ] **like card**
-67. [ ] **my fav cards**
+67. [ ] **edit card**
+68. [ ] **map to model**
+69. [ ] **normalize card**
 
-68. [ ] **search bar**
-69. [ ] **loader or Backdrop or Progress in mui**
-70. [ ] **display mode & toggle button in mui**
-71. [ ] **.ENV**
+70. [ ] **like card**
+71. [ ] **my fav cards**
 
-72. [ ] **tests**
+72. [ ] **search bar**
+73. [ ] **display mode & toggle button in mui**
+74. [ ] **.ENV**
+
+75. [ ] **tests**
 
 ## MUI
 
@@ -97,3 +101,5 @@
 3.  [ ] **App bar**
 4.  [ ] **Bottom navigation**
 5.  [ ] **Form & Inputs**
+
+6.  [ ] **installing fantazi font**

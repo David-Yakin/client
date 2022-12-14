@@ -32,6 +32,8 @@ const CardsPage = () => {
       />
       {isPending && <Spinner />}
       {error && <Error errorMessage={error} />}
+      {cards && !cards.length && 
+      <p>Oops, there are no business cards in the database that match the parameters you entered</p>}
       {cards && !!cards.length && <Cards cards={cards} />}
     </Container>
   );

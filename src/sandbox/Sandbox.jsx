@@ -1,6 +1,6 @@
 // import React from "react";
 // import Loops from "./Loops";
-// import LifeCycleHooks from "./LifeCycleHooks";
+import LifeCycleHooks from "./LifeCycleHooks";
 // import FatherComp from "./props/FatherComp";
 // import OnClick from "./events/OnClick";
 // import FatherPropTypes from "./propTypes/FatherPropTypes";
@@ -16,7 +16,7 @@ const Sandbox = () => {
       {/* <Loops /> */}
       {/* <OnClick /> */}
       {/* <FatherPropTypes /> */}
-      {/* <LifeCycleHooks /> */}
+      <LifeCycleHooks />
       {/* <UseCallBack /> */}
       {/* <Counter /> */}
       {/* <UseCallBackComp /> */}
