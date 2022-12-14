@@ -45,11 +45,11 @@
 35. [x] **getCards in CardsPage.jsx**
 36. [x] **Progress - mui spinner**
 37. [x] **Error component - for handling response error**
-38. [ ] **useCards**
-39. [ ] **getCard in CardsDetailsPage.jsx**
+38. [ ] **axios interceptors - useAxios**
+39. [ ] **useCards**
+40. [ ] **getCard in CardsDetailsPage.jsx**
 
-40. [ ] **useContext**
-41. [ ] **axios interceptors - useAxios**
+41. [ ] **useContext**
 42. [ ] **react toastify or Snackbar mui**
 
 43. [ ] **Forms in react & material-UI**

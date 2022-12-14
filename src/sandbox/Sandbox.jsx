@@ -3,11 +3,12 @@
 // import LifeCycleHooks from "./LifeCycleHooks";
 // import FatherComp from "./props/FatherComp";
 // import OnClick from "./events/OnClick";
-import FatherPropTypes from "./propTypes/FatherPropTypes";
+// import FatherPropTypes from "./propTypes/FatherPropTypes";
 // import UseCallBack from "./optimization/UseCallBack";
 // import Counter from "./custom-hook/Counter";
 // import UseCallBackComp from "./Memoization/UseCallBackComp";
 // import UseMemo from "./Memoization/UseMemo";
+// import AxiosComp from "./axios/AxiosComp";
 
 const Sandbox = () => {
   return (
@@ -15,12 +16,13 @@ const Sandbox = () => {
       {/* <FatherComp /> */}
       {/* <Loops /> */}
       {/* <OnClick /> */}
-      <FatherPropTypes />
+      {/* <FatherPropTypes /> */}
       {/* <LifeCycleHooks /> */}
       {/* <UseCallBack /> */}
       {/* <Counter /> */}
       {/* <UseCallBackComp /> */}
       {/* <UseMemo /> */}
+      {/* <AxiosComp />/ */}
     </>
   );
 };
