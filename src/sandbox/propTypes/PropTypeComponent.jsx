@@ -98,27 +98,27 @@ PropTypeComponent.propTypes = {
 // };
 
 /*****  node & children *****/
-// const PropTypeComponent = ({ node, children }) => {
-//   return `${node} ${children}`;
+// const PropTypeComponent = ({ element, children }) => {
+//   return `${element} ${children}`;
 // };
 
 // PropTypeComponent.propTypes = {
-//   node: PropTypes.node.isRequired,
+//   element: PropTypes.node.isRequired,
 //   children: PropTypes.string,
 // };
 
 /***** element *****/
-// const PropTypeComponent = ({ node, children }) => {
+// const PropTypeComponent = ({ element, children }) => {
 //   console.dir(children);
 //   return (
 //     <>
-//       {node} {children}
+//       {element} {children}
 //     </>
 //   );
 // };
 
 // PropTypeComponent.propTypes = {
-//   node: PropTypes.node.isRequired,
+//   element: PropTypes.node.isRequired,
 //   children: PropTypes.element,
 // };
 

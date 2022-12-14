@@ -82,14 +82,14 @@ const FatherPropTypes = () => {
 
 /***** node & children *****/
 // const FatherPropTypes = () => {
-//   return <PropTypeComponent node="David">Yakin</PropTypeComponent>;
+//   return <PropTypeComponent element="David">Yakin</PropTypeComponent>;
 // };
 
 /***** element *****/
 // const FatherPropTypes = () => {
 //   return (
-//     <PropTypeComponent node="David">
-//       <PropTypeComponent node="yakin" />
+//     <PropTypeComponent element="David">
+//       <PropTypeComponent element="yakin" />
 //     </PropTypeComponent>
 //   );
 // };
