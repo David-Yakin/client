@@ -27,72 +27,73 @@
 21. [x] **nav bar**
 22. [x] **routes model**
 23. [x] **useNavigate**
+24. [ ] **nested routes**
 
-24. [x] **react-router-dom navigator**
-25. [x] **bottom nav**
-26. [x] **CardDetails**
-27. [x] **useParams react-router-dom hook**
+25. [x] **react-router-dom navigator**
+26. [x] **bottom nav**
+27. [x] **CardDetails**
+28. [x] **useParams react-router-dom hook**
 
-28. [x] **React Lifecycle Hooks**
-29. [x] **useEffect**
+29. [x] **React Lifecycle Hooks**
+30. [x] **useEffect**
 
-30. [x] **custom hooks**
-31. [x] **useCallback**
-32. [x] **useMemo**
+31. [x] **custom hooks**
+32. [x] **useCallback**
+33. [x] **useMemo**
 
-33. [x] **axios**
-34. [x] **cardService**
-35. [x] **getCards in CardsPage.jsx**
-36. [x] **Progress - mui spinner**
-37. [x] **Error component - for handling response error**
-38. [ ] **axios interceptors - useAxios**
-39. [ ] **useCards**
-40. [ ] **getCard in CardsDetailsPage.jsx**
+34. [x] **axios**
+35. [x] **cardService**
+36. [x] **getCards in CardsPage.jsx**
+37. [x] **Progress - mui spinner**
+38. [x] **Error component - for handling response error**
+39. [ ] **axios interceptors - useAxios**
+40. [ ] **useCards**
+41. [ ] **getCard in CardsDetailsPage.jsx**
 
-41. [ ] **useContext**
-42. [ ] **react toastify or Snackbar mui**
+42. [ ] **useContext**
+43. [ ] **react toastify or Snackbar mui**
 
-43. [ ] **Forms in react & material-UI**
-44. [ ] **mui textField**
-45. [ ] **signup**
-46. [ ] **useForm**
-47. [ ] **Joi client side**
-48. [ ] **handle Submit**
-49. [ ] **reset Form**
+44. [ ] **Forms in react & material-UI**
+45. [ ] **mui textField**
+46. [ ] **signup**
+47. [ ] **useForm**
+48. [ ] **Joi client side**
+49. [ ] **handle Submit**
+50. [ ] **reset Form**
 
-50. [ ] **login**
-51. [ ] **jwt authorization client side**
-52. [ ] **localStorage service**
-53. [ ] **get current user**
-54. [ ] **Provider & useProvider - userProvider**
-55. [ ] **logout**
-56. [ ] **useRef - 3 failed attempts**
-57. [ ] **useRef - focus on input**
+51. [ ] **login**
+52. [ ] **jwt authorization client side**
+53. [ ] **localStorage service**
+54. [ ] **get current user**
+55. [ ] **Provider & useProvider - userProvider**
+56. [ ] **logout**
+57. [ ] **useRef - 3 failed attempts**
+58. [ ] **useRef - focus on input**
 
-58. [ ] **create card**
+59. [ ] **create card**
 
-59. [ ] **biz signUp**
-60. [ ] **progress bar**
-61. [ ] **payment method**
-62. [ ] **create new business card**
-63. [ ] **my cards**
+60. [ ] **biz signUp**
+61. [ ] **progress bar**
+62. [ ] **payment method**
+63. [ ] **create new business card**
+64. [ ] **my cards**
 
-64. [ ] **delete card**
-65. [ ] **swal or Dialog in mui**
-66. [ ] **handleDelete card**
+65. [ ] **delete card**
+66. [ ] **swal or Dialog in mui**
+67. [ ] **handleDelete card**
 
-67. [ ] **edit card**
-68. [ ] **map to model**
-69. [ ] **normalize card**
+68. [ ] **edit card**
+69. [ ] **map to model**
+70. [ ] **normalize card**
 
-70. [ ] **like card**
-71. [ ] **my fav cards**
+71. [ ] **like card**
+72. [ ] **my fav cards**
 
-72. [ ] **search bar**
-73. [ ] **display mode & toggle button in mui**
-74. [ ] **.ENV**
+73. [ ] **search bar**
+74. [ ] **display mode & toggle button in mui**
+75. [ ] **.ENV**
 
-75. [ ] **tests**
+76. [ ] **tests**
 
 ## MUI
 

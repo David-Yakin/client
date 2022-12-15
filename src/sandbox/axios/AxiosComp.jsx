@@ -1,43 +1,27 @@
-// import { useState, useEffect } from "react";
-// import axios from "axios";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import Container from "@mui/material/Container";
 
-// const AxiosComp = () => {
-//   const [name, setName] = useState("test");
-//   useEffect(() => {
-//     axios
-//       .get("/db.json")
-//       .then(({ data }) => {
-//         setName(data.name);
-//       })
-//       .catch(error => console.log(error));
-//   }, []);
-//   return <div>{name}</div>;
-// };
+const AxiosComp = () => {
+  const [joke, setJoke] = useState(null);
+  useEffect(() => {
+    axios
+      .get("https://api.chucknorris.io/jokes/random")
+      .then(({ data }) => {
+        console.log(data);
+        setJoke(data.value);
+      })
+      .catch(error => console.log(error));
+  }, []);
 
-// export default AxiosComp;
-// import { useState, useEffect } from "react";
-// import axios from "axios";
+  if (joke)
+    return (
+      <Container maxWidth="lg" sx={{ mt: 2 }}>
+        <div>{joke}</div>
+      </Container>
+    );
 
-// const fetchData = async () => {
-//   try {
-//     const response = await fetch("./db.json");
-//     console.log(response);
-//     const data = await response.json();
-//     console.log(data);
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
+  return null;
+};
 
-// const AxiosComp = () => {
-//   const [name, setName] = useState("test");
-
-//   fetchData();
-
-//   useEffect(() => {
-//     fetchData()
-//   }, []);
-//   return <div>{name}</div>;
-// };
-
-// export default AxiosComp;
+export default AxiosComp;

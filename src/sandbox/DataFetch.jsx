@@ -3,7 +3,7 @@ import axios from "axios";
 
 const DataFetch = () => {
   const [post, setPost] = useState({});
-  // const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([]);
   const [id, setId] = useState(1);
 
   useEffect(() => {
@@ -13,7 +13,15 @@ const DataFetch = () => {
       .catch(err => console.log(err));
   }, [id]);
 
-  // if (!posts.length) return "no data...";
+  useEffect(() => {
+    axios
+      .get(`https://jsonplaceholder.typicode.com/posts`)
+      .then(({ data }) => setPosts(data))
+      .catch(err => console.log(err));
+  }, []);
+
+  if (!posts.length) return "no data...";
+  console.log(posts);
 
   return (
     <div>
@@ -30,11 +38,14 @@ const DataFetch = () => {
         <ul>
           <li>{post.title}</li>
         </ul>
-        {/* <ul>
+        <br />
+        <h2>all the blogs titles</h2>
+        <hr />
+        <ul>
           {posts.map((post, index) => (
             <li key={index}>{post.title}</li>
           ))}
-        </ul> */}
+        </ul>
       </div>
     </div>
   );

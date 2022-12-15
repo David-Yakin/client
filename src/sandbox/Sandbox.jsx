@@ -1,28 +1,30 @@
-// import React from "react";
-// import Loops from "./Loops";
-// import LifeCycleHooks from "./LifeCycleHooks";
-// import FatherComp from "./props/FatherComp";
-// import OnClick from "./events/OnClick";
-// import FatherPropTypes from "./propTypes/FatherPropTypes";
-// import UseCallBack from "./optimization/UseCallBack";
-// import Counter from "./custom-hook/Counter";
-// import UseCallBackComp from "./Memoization/UseCallBackComp";
-// import UseMemo from "./Memoization/UseMemo";
-// import AxiosComp from "./axios/AxiosComp";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import NavItem from "./../routes/NavItem";
+import { Outlet } from "react-router-dom";
+import Container from "@mui/material/Container";
 
 const Sandbox = () => {
   return (
     <>
-      {/* <FatherComp /> */}
-      {/* <Loops /> */}
-      {/* <OnClick /> */}
-      {/* <FatherPropTypes /> */}
-      {/* <LifeCycleHooks /> */}
-      {/* <UseCallBack /> */}
-      {/* <Counter /> */}
-      {/* <UseCallBackComp /> */}
-      {/* <UseMemo /> */}
-      {/* <AxiosComp />/ */}
+      <AppBar position="static" color="transparent">
+        <Toolbar>
+          <NavItem label="props" to="props" color="black" />
+          <NavItem label="fetch" to="fetch" color="black" />
+          <NavItem label="custom hook" to="custom-hook" color="black" />
+          <NavItem label="propTypes" to="propTypes" color="black" />
+          <NavItem label="lifecycle" to="lifecycle" color="black" />
+          <NavItem label="usecallback" to="use-callback" color="black" />
+          <NavItem label="loops" to="loops" color="black" />
+          <NavItem label="events" to="events" color="black" />
+          <NavItem label="usememo" to="use-memo" color="black" />
+          <NavItem label="axios" to="axios" color="black" />
+        </Toolbar>
+      </AppBar>
+
+      <Container maxWidth="lg">
+        <Outlet />
+      </Container>
     </>
   );
 };
