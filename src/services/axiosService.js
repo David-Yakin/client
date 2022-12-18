@@ -12,18 +12,12 @@ axios.interceptors.request.use(
   }
 );
 
-axios.interceptors.response.use(
-  data => {
-    console.log("in axiosService response");
-    return Promise.resolve(data);
-  },
-  error => {
-    console.log("in axiosService response interceptors error");
-    console.log(`Error from server: ${error.response.data}`);
-    console.log(`Error from axios: ${error.message}`);
-    return Promise.reject(error);
-  }
-);
+axios.interceptors.response.use(null, error => {
+  console.log("in axiosService response interceptors error");
+  console.log(`Error from server: ${error.response.data}`);
+  console.log(`Error from axios: ${error.message}`);
+  return Promise.reject(error);
+});
 
 // import axios from "axios";/
 

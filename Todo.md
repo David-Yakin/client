@@ -27,7 +27,7 @@
 21. [x] **nav bar**
 22. [x] **routes model**
 23. [x] **useNavigate**
-24. [ ] **nested routes**
+24. [x] **nested routes**
 
 25. [x] **react-router-dom navigator**
 26. [x] **bottom nav**
@@ -46,9 +46,9 @@
 36. [x] **getCards in CardsPage.jsx**
 37. [x] **Progress - mui spinner**
 38. [x] **Error component - for handling response error**
-39. [ ] **axios interceptors - useAxios**
-40. [ ] **useCards**
-41. [ ] **getCard in CardsDetailsPage.jsx**
+39. [x] **axios interceptors - useAxios**
+40. [x] **useCards**
+41. [x] **getCard in CardsDetailsPage.jsx**
 
 42. [ ] **useContext**
 43. [ ] **react toastify or Snackbar mui**

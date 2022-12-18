@@ -10,15 +10,16 @@ const Sandbox = () => {
       <AppBar position="static" color="transparent">
         <Toolbar>
           <NavItem label="props" to="props" color="black" />
-          <NavItem label="fetch" to="fetch" color="black" />
-          <NavItem label="custom hook" to="custom-hook" color="black" />
+          <NavItem label="events" to="events" color="black" />
+          <NavItem label="loops" to="loops" color="black" />
           <NavItem label="propTypes" to="propTypes" color="black" />
+          <NavItem label="custom hook" to="custom-hook" color="black" />
           <NavItem label="lifecycle" to="lifecycle" color="black" />
           <NavItem label="usecallback" to="use-callback" color="black" />
-          <NavItem label="loops" to="loops" color="black" />
-          <NavItem label="events" to="events" color="black" />
           <NavItem label="usememo" to="use-memo" color="black" />
+          <NavItem label="fetch" to="fetch" color="black" />
           <NavItem label="axios" to="axios" color="black" />
+          <NavItem label="useContext" to="use-context" color="black" />
         </Toolbar>
       </AppBar>
 

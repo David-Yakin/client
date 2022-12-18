@@ -5,6 +5,8 @@ import PageHeader from "../../components/PageHeader";
 import { Box } from "@mui/material";
 import CardComponent from "../components/card/Card";
 import useCards from "./../hooks/useCards";
+import Spinner from "./../../components/Spinner";
+import Error from "../../components/Error";
 
 const CardDetailsPage = () => {
   const { id } = useParams();
@@ -21,6 +23,8 @@ const CardDetailsPage = () => {
         title="Business Details"
         subtitle="Here you can find more details about the business"
       />
+      {isLoading && <Spinner />}
+      {error && <Error errorMessage={error} />}
       {card && (
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <CardComponent card={card} handleCardDelete={() => {}} />
