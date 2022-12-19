@@ -50,50 +50,51 @@
 40. [x] **useCards**
 41. [x] **getCard in CardsDetailsPage.jsx**
 
-42. [ ] **useContext**
-43. [ ] **Snackbar mui**
+42. [x] **useContext**
+43. [x] **dark mode**
+44. [ ] **Snackbar mui**
 
-44. [ ] **Forms in react & material-UI**
-45. [ ] **mui textField**
-46. [ ] **signup**
-47. [ ] **useForm**
-48. [ ] **Joi client side**
-49. [ ] **handle Submit**
-50. [ ] **reset Form**
+45. [ ] **Forms in react & material-UI**
+46. [ ] **mui textField**
+47. [ ] **signup**
+48. [ ] **useForm**
+49. [ ] **Joi client side**
+50. [ ] **handle Submit**
+51. [ ] **reset Form**
 
-51. [ ] **login**
-52. [ ] **jwt authorization client side**
-53. [ ] **localStorage service**
-54. [ ] **get current user**
-55. [ ] **Provider & useProvider - userProvider**
-56. [ ] **logout**
-57. [ ] **useRef - 3 failed attempts**
-58. [ ] **useRef - focus on input**
+52. [ ] **login**
+53. [ ] **jwt authorization client side**
+54. [ ] **localStorage service**
+55. [ ] **get current user**
+56. [ ] **Provider & useProvider - userProvider**
+57. [ ] **logout**
+58. [ ] **useRef - 3 failed attempts**
+59. [ ] **useRef - focus on input**
 
-59. [ ] **create card**
+60. [ ] **create card**
 
-60. [ ] **biz signUp**
-61. [ ] **progress bar**
-62. [ ] **payment method**
-63. [ ] **create new business card**
-64. [ ] **my cards**
+61. [ ] **biz signUp**
+62. [ ] **progress bar**
+63. [ ] **payment method**
+64. [ ] **create new business card**
+65. [ ] **my cards**
 
-65. [ ] **delete card**
-66. [ ] **swal or Dialog in mui**
-67. [ ] **handleDelete card**
+66. [ ] **delete card**
+67. [ ] **swal or Dialog in mui**
+68. [ ] **handleDelete card**
 
-68. [ ] **edit card**
-69. [ ] **map to model**
-70. [ ] **normalize card**
+69. [ ] **edit card**
+70. [ ] **map to model**
+71. [ ] **normalize card**
 
-71. [ ] **like card**
-72. [ ] **my fav cards**
+72. [ ] **like card**
+73. [ ] **my fav cards**
 
-73. [ ] **search bar**
-74. [ ] **display mode & toggle button in mui**
-75. [ ] **.ENV**
+74. [ ] **search bar**
+75. [ ] **display mode & toggle button in mui**
+76. [ ] **.ENV**
 
-76. [ ] **tests**
+77. [ ] **tests**
 
 ## MUI
 

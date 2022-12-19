@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useMemo, useCallback } from "react";
 import { node } from "prop-types";
 import {
   createTheme,
@@ -10,9 +10,9 @@ const ThemeContext = React.createContext();
 export const ThemeProvider = ({ children }) => {
   const [isDark, setDark] = useState(false);
 
-  const toggleDarkMode = () => {
+  const toggleDarkMode = useCallback(() => {
     setDark(prev => !prev);
-  };
+  }, [setDark]);
 
   const theme = createTheme({
     palette: {
@@ -20,18 +20,20 @@ export const ThemeProvider = ({ children }) => {
     },
   });
 
+  const value = useMemo(() => {
+    return { isDark, toggleDarkMode };
+  }, [isDark, toggleDarkMode]);
+
   return (
     <MuiThemeProvider theme={theme}>
-      <ThemeContext.Provider value={{ isDark, toggleDarkMode }}>
-        {children}
-      </ThemeContext.Provider>
+      <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
     </MuiThemeProvider>
   );
 };
 
 export const useTheme = () => {
   const context = useContext(ThemeContext);
-  if (!context) throw new Error("useTheme must be used within a NameProvider");
+  if (!context) throw new Error("useTheme must be used within a ThemeProvider");
   return context;
 };
 
