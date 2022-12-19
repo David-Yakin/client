@@ -51,7 +51,7 @@
 41. [x] **getCard in CardsDetailsPage.jsx**
 
 42. [ ] **useContext**
-43. [ ] **react toastify or Snackbar mui**
+43. [ ] **Snackbar mui**
 
 44. [ ] **Forms in react & material-UI**
 45. [ ] **mui textField**

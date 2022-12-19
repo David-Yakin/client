@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { node } from "prop-types";
 
 const NameContext = React.createContext(null);
@@ -19,7 +19,7 @@ export const NameProvider = ({ children }) => {
 };
 
 export const useName = () => {
-  const context = React.useContext(NameContext);
+  const context = useContext(NameContext);
   if (!context) throw new Error("useName must be used within a NameProvider");
   return context;
 };

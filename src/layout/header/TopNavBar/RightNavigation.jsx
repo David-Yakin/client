@@ -9,6 +9,9 @@ import { NavBarMenu } from "./NavBarMenu";
 import { useState } from "react";
 import NavItem from "../../../routes/NavItem";
 import ROUTES from "./../../../routes/routesModel";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import { useTheme } from "../../../providers/ThemeProvider";
 
 export const RightNavigation = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -16,10 +19,16 @@ export const RightNavigation = () => {
   const user = false;
   const handleCloseMenu = () => setAnchorEl(null);
 
+  const { isDark, toggleDarkMode } = useTheme();
+
   return (
     <>
       <Box sx={{ display: { xs: "none", md: "inline-flex" } }}>
         <SearchBar />
+
+        <IconButton onClick={toggleDarkMode}>
+          {isDark ? <LightModeIcon /> : <DarkModeIcon />}
+        </IconButton>
 
         {!user && (
           <Box>
