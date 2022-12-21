@@ -9,6 +9,7 @@ import {
   changeLikeStatus,
 } from "./../services/cardService";
 import useAxios from "../../hooks/useAxios";
+import { useSnackbar } from "../../providers/SnackbarProvider";
 
 const useCards = () => {
   const [cards, setCards] = useState(null);
@@ -17,6 +18,7 @@ const useCards = () => {
   const [error, setError] = useState(null);
 
   useAxios();
+  const snack = useSnackbar();
 
   const requestStatus = (loading, errorMessage, cards, card = null) => {
     setLoading(loading);
@@ -60,6 +62,7 @@ const useCards = () => {
       setLoading(true);
       const card = await createCard(cardFromClient);
       requestStatus(false, null, null, card);
+      snack("success", "A new business card has been created");
     } catch (error) {
       requestStatus(false, error, null);
     }
@@ -70,6 +73,7 @@ const useCards = () => {
       setLoading(true);
       const card = await editCard(cardFromClient);
       requestStatus(false, null, null, card);
+      snack("success", "The business card has been successfully updated");
     } catch (error) {
       requestStatus(false, error, null);
     }
@@ -81,6 +85,7 @@ const useCards = () => {
       const card = await deleteCard(cardId);
       const cards = await getCards();
       requestStatus(false, null, cards, card);
+      snack("success", "The business card has been successfully deleted");
     } catch (error) {
       requestStatus(false, error, null);
     }
