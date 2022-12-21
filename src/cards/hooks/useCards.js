@@ -1,76 +1,3 @@
-// import { useState } from "react";
-// import { getCards } from "./../services/cardService";
-
-// const useCards = () => {
-//   const [cards, setCards] = useState(null);
-//   const [card, setCard] = useState(null);
-//   const [isLoading, setLoading] = useState(true);
-//   const [error, setError] = useState(null);
-
-//   const handleGetCards = async () => {
-//     try {
-//       setLoading(true);
-//       const cards = await getCards();
-//       setLoading(false);
-//       setError(null);
-//       setCards(cards);
-//     } catch (error) {
-//       setLoading(false);
-//       setError(error);
-//       setCards(null);
-//     }
-//   };
-
-//   return {
-//     card,
-//     cards,
-//     isLoading,
-//     error,
-//     handleGetCards,
-//   };
-// };
-
-// export default useCards;
-
-/********** adding requestStatus method **********/
-// import { useState } from "react";
-// import { getCards } from "./../services/cardService";
-
-// const useCards = () => {
-//   const [cards, setCards] = useState(null);
-//   const [card, setCard] = useState(null);
-//   const [isLoading, setLoading] = useState(true);
-//   const [error, setError] = useState(null);
-
-//   const requestStatus = (loading, errorMessage, cards, card = null) => {
-//     setLoading(loading);
-//     setCards(cards);
-//     setCard(card);
-//     setError(errorMessage);
-//   };
-
-//   const handleGetCards = async () => {
-//     try {
-//       setLoading(true);
-//       const cards = await getCards();
-//       requestStatus(false, null, cards);
-//     } catch (error) {
-//       requestStatus(false, error, null);
-//     }
-//   };
-
-//   return {
-//     card,
-//     cards,
-//     isLoading,
-//     error,
-//     handleGetCards,
-//   };
-// };
-
-// export default useCards;
-
-/********** all CRUD functions **********/
 import { useState } from "react";
 import {
   getCards,
@@ -81,12 +8,15 @@ import {
   getMyCards,
   changeLikeStatus,
 } from "./../services/cardService";
+import useAxios from "../../hooks/useAxios";
 
 const useCards = () => {
   const [cards, setCards] = useState(null);
   const [card, setCard] = useState(null);
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  useAxios();
 
   const requestStatus = (loading, errorMessage, cards, card = null) => {
     setLoading(loading);

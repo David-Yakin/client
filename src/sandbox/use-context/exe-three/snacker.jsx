@@ -22,22 +22,19 @@ export default function PositionedSnackbar() {
     setState({ ...state, open: false });
   };
 
-  const buttons = (
-    <React.Fragment>
-      <Button
-        onClick={handleClick({
-          vertical: "top",
-          horizontal: "right",
-        })}>
-        Top-Right
-      </Button>
-    </React.Fragment>
-  );
-
   return (
     <div>
-      {buttons}
-      <Snackbar
+      <React.Fragment>
+        <Button
+          onClick={handleClick({
+            vertical: "top",
+            horizontal: "right",
+          })}>
+          Top-Right
+        </Button>
+      </React.Fragment>
+
+      {/* <Snackbar
         anchorOrigin={{ vertical, horizontal }}
         open={open}
         onClose={handleClose}
@@ -48,7 +45,7 @@ export default function PositionedSnackbar() {
         <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
           This is a success message!
         </Alert>
-      </Snackbar>
+      </Snackbar> */}
     </div>
   );
 }

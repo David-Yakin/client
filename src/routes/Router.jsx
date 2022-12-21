@@ -20,6 +20,7 @@ import AxiosComp from "./../sandbox/axios/AxiosComp";
 import UseContext from "./../sandbox/use-context/UseContext";
 import ThemeProvider from "../sandbox/use-context/exeOne/ThemeProvider";
 import A from "../sandbox/use-context/exeTwo/components/A";
+import Snackbar from "../sandbox/mui-sandbox/snackbar/Snackbar";
 
 const Router = () => {
   return (
@@ -40,6 +41,7 @@ const Router = () => {
         <Route path="events" element={<OnClick />} />
         <Route path="use-memo" element={<UseMemo />} />
         <Route path="axios" element={<AxiosComp />} />
+        <Route path="snackbar" element={<Snackbar />} />
         <Route path="use-context" element={<UseContext />}>
           <Route path="exe-one" element={<ThemeProvider />} />
           <Route path="exe-two" element={<A />} />

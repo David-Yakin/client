@@ -20,6 +20,7 @@ const Sandbox = () => {
           <NavItem label="fetch" to="fetch" color="black" />
           <NavItem label="axios" to="axios" color="black" />
           <NavItem label="useContext" to="use-context" color="black" />
+          <NavItem label="snackbar" to="snackbar" color="black" />
         </Toolbar>
       </AppBar>
 

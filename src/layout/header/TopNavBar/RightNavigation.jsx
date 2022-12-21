@@ -26,7 +26,7 @@ export const RightNavigation = () => {
       <Box sx={{ display: { xs: "none", md: "inline-flex" } }}>
         <SearchBar />
 
-        <IconButton onClick={toggleDarkMode}>
+        <IconButton onClick={toggleDarkMode} sx={{ marginLeft: 1 }}>
           {isDark ? <LightModeIcon /> : <DarkModeIcon />}
         </IconButton>
 

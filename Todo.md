@@ -98,10 +98,11 @@
 
 ## MUI
 
-1.  [x] **Layout**
-2.  [ ] **navigation**
-3.  [ ] **App bar**
-4.  [ ] **Bottom navigation**
-5.  [ ] **Form & Inputs**
+1.  [ ] **Cards**
+2.  [x] **Layout**
+3.  [ ] **navigation**
+4.  [ ] **App bar**
+5.  [ ] **Bottom navigation**
+6.  [ ] **Form & Inputs**
 
-6.  [ ] **installing fantazi font**
+7.  [ ] **installing fantazi font**
