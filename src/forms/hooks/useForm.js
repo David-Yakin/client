@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { object, func } from "prop-types";
 import Joi from "joi";
 
@@ -6,10 +6,10 @@ const useForm = (initialForm, schema, handleSubmit) => {
   const [data, setData] = useState(initialForm);
   const [errors, setErrors] = useState({});
 
-  const handleReset = () => {
+  const handleReset = useCallback(() => {
     setData(initialForm);
     setErrors({});
-  };
+  }, [initialForm]);
 
   const validateProperty = useCallback(
     ({ name, value }) => {
@@ -49,19 +49,23 @@ const useForm = (initialForm, schema, handleSubmit) => {
     handleSubmit(data);
   }, [handleSubmit, data]);
 
-  return { data, errors, onSubmit, handleChange, handleReset, validateForm };
+  const value = useMemo(() => {
+    return { data, errors };
+  }, [data, errors]);
+
+  return {
+    value,
+    onSubmit,
+    handleChange,
+    handleReset,
+    validateForm,
+  };
 };
 
 useForm.propTypes = {
   initialForm: object.isRequired,
   schema: object.isRequired,
-  options: object.isRequired,
   handleSubmit: func.isRequired,
-  validationOptions: object.isRequired,
-};
-
-useForm.defaultProps = {
-  validationOptions: { abortEarly: false },
 };
 
 export default useForm;

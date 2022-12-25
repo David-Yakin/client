@@ -31,7 +31,7 @@ const FormTest = () => {
 
   const INITIAL_FORM = { email: "", password: "" };
 
-  const { data, errors, ...rest } = useForm(INITIAL_FORM, schema, handleSubmit);
+  const { value, ...rest } = useForm(INITIAL_FORM, schema, handleSubmit);
 
   return (
     <Box
@@ -44,7 +44,7 @@ const FormTest = () => {
       <Form
         onSubmit={rest.onSubmit}
         handleReset={rest.handleReset}
-        errors={errors}
+        errors={value.errors}
         validateForm={rest.validateForm}
         styles={{ maxWidth: "450px" }}
         title="sign in">
@@ -52,19 +52,19 @@ const FormTest = () => {
           label="email"
           name="email"
           type="email"
-          error={errors.email}
+          error={value.errors.email}
           required={true}
           handleChange={rest.handleChange}
-          data={data}
+          data={value.data}
         />
         <Input
           label="password"
           name="password"
           type="password"
-          error={errors.password}
+          error={value.errors.password}
           required={true}
           handleChange={rest.handleChange}
-          data={data}
+          data={value.data}
           //   sm={6}
         />
       </Form>

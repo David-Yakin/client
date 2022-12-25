@@ -41,4 +41,5 @@ FormButton.defaultProps = {
   disabled: false,
   size: "medium",
 };
-export default FormButton;
+
+export default React.memo(FormButton);
