@@ -21,6 +21,8 @@ import UseContext from "./../sandbox/use-context/UseContext";
 import ThemeProvider from "../sandbox/use-context/exeOne/ThemeProvider";
 import A from "../sandbox/use-context/exeTwo/components/A";
 import Snackbar from "../sandbox/mui-sandbox/snackbar/Snackbar";
+import MuiTextField from "../sandbox/mui-textfield/MuiTextField";
+import FormTest from "../sandbox/forms/FormTest";
 
 const Router = () => {
   return (
@@ -42,6 +44,8 @@ const Router = () => {
         <Route path="use-memo" element={<UseMemo />} />
         <Route path="axios" element={<AxiosComp />} />
         <Route path="snackbar" element={<Snackbar />} />
+        <Route path="text-field" element={<MuiTextField />} />
+        <Route path="form" element={<FormTest />} />
         <Route path="use-context" element={<UseContext />}>
           <Route path="exe-one" element={<ThemeProvider />} />
           <Route path="exe-two" element={<A />} />

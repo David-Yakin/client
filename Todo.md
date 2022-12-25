@@ -52,49 +52,57 @@
 
 42. [x] **useContext**
 43. [x] **dark mode**
-44. [ ] **Snackbar mui**
+44. [x] **Snackbar mui**
 
 45. [ ] **Forms in react & material-UI**
 46. [ ] **mui textField**
-47. [ ] **signup**
-48. [ ] **useForm**
-49. [ ] **Joi client side**
-50. [ ] **handle Submit**
-51. [ ] **reset Form**
+47. [ ] **useForm**
+48. [ ] **Form component**
+49. [ ] **Input component**
+50. [ ] **FormButton component**
+51. [ ] **normalize object**
+52. [ ] **signup**
+53. [ ] **Textarea component**
+54. [ ] **Joi client side**
+55. [ ] **handle Submit**
+56. [ ] **reset Form**
+57. [ ] **onChange input**
 
-52. [ ] **login**
-53. [ ] **jwt authorization client side**
-54. [ ] **localStorage service**
-55. [ ] **get current user**
-56. [ ] **Provider & useProvider - userProvider**
-57. [ ] **logout**
-58. [ ] **useRef - 3 failed attempts**
-59. [ ] **useRef - focus on input**
+58. [ ] **login**
+59. [ ] **jwt authorization client side**
+60. [ ] **localStorage service**
+61. [ ] **get current user**
+62. [ ] **userProvider**
+63. [ ] **logout**
+64. [ ] **useRef - 3 failed attempts**
+65. [ ] **useRef - focus on input**
 
-60. [ ] **create card**
+66. [ ] **create card**
 
-61. [ ] **biz signUp**
-62. [ ] **progress bar**
-63. [ ] **payment method**
-64. [ ] **create new business card**
-65. [ ] **my cards**
+67. [ ] **biz signUp**
+68. [ ] **progress bar**
+69. [ ] **payment method**
+70. [ ] **create new business card**
+71. [ ] **my cards**
 
-66. [ ] **delete card**
-67. [ ] **swal or Dialog in mui**
-68. [ ] **handleDelete card**
+72. [ ] **delete card**
+73. [ ] **swal or Dialog in mui**
+74. [ ] **handleDelete card**
 
-69. [ ] **edit card**
-70. [ ] **map to model**
-71. [ ] **normalize card**
+75. [ ] **edit card**
+76. [ ] **map to model**
+77. [ ] **normalize card**
 
-72. [ ] **like card**
-73. [ ] **my fav cards**
+78. [ ] **like card**
+79. [ ] **my fav cards**
 
-74. [ ] **search bar**
-75. [ ] **display mode & toggle button in mui**
-76. [ ] **.ENV**
+80. [ ] **search bar**
+81. [ ] **.ENV**
 
-77. [ ] **tests**
+## Extras
+
+79. [ ] **display mode & toggle button in mui**
+80. [ ] **tests**
 
 ## MUI
 

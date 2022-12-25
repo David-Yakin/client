@@ -1,40 +1,22 @@
-// import axios from "axios";
-
-// const useAxios = () => {
-//   axios.interceptors.request.use(data => {
-//     console.log("in useAxios request interceptor");
-//     return Promise.resolve(data);
-//   }, null);
-
-//   axios.interceptors.response.use(
-//     data => {
-//       console.log("in useAxios request interceptor");
-//       return Promise.resolve(data);
-//     },
-//     error => {
-//       console.log("in useAxios request interceptor");
-//       return Promise.reject(error);
-//     }
-//   );
-// };
-
-// export default useAxios;
-
 import axios from "axios";
 import { useSnackbar } from "../providers/SnackbarProvider";
+import { useEffect } from "react";
 
 const useAxios = () => {
   const snack = useSnackbar();
+  useEffect(() => {
+    if (snack) {
+      axios.interceptors.request.use(data => {
+        return Promise.resolve(data);
+      }, null);
 
-  axios.interceptors.request.use(data => {
-    return Promise.resolve(data);
-  }, null);
-
-  axios.interceptors.response.use(null, error => {
-    const expectedError = error.response && error.response.status >= 400;
-    if (expectedError) snack("error", error.message);
-    return Promise.reject(error);
-  });
+      axios.interceptors.response.use(null, error => {
+        const expectedError = error.response && error.response.status >= 400;
+        if (expectedError) snack("error", error.message);
+        return Promise.reject(error);
+      });
+    }
+  }, [snack]);
 };
 
 export default useAxios;

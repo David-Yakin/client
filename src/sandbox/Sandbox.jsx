@@ -21,6 +21,8 @@ const Sandbox = () => {
           <NavItem label="axios" to="axios" color="black" />
           <NavItem label="useContext" to="use-context" color="black" />
           <NavItem label="snackbar" to="snackbar" color="black" />
+          <NavItem label="textfield" to="text-field" color="black" />
+          <NavItem label="form" to="form" color="black" />
         </Toolbar>
       </AppBar>
 

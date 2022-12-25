@@ -11,15 +11,12 @@ export const SnackbarProvider = ({ children }) => {
   const [snackMessage, setSnackMessage] = useState("in snackbar!");
   const [snackVariant, setSnackVariant] = useState("filled");
 
-  const setSnack = useCallback(
-    (color, message, variant = "filled") => {
-      setOpenSnack(true);
-      setSnackColor(color);
-      setSnackMessage(message);
-      setSnackVariant(variant);
-    },
-    [setOpenSnack, setSnackColor, setSnackMessage, setSnackVariant]
-  );
+  const setSnack = useCallback((color, message, variant = "filled") => {
+    setOpenSnack(true);
+    setSnackColor(color);
+    setSnackMessage(message);
+    setSnackVariant(variant);
+  }, []);
 
   return (
     <>
