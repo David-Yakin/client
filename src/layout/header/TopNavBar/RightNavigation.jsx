@@ -12,11 +12,13 @@ import ROUTES from "./../../../routes/routesModel";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { useTheme } from "../../../providers/ThemeProvider";
+import { useUser } from "../../../users/providers/UserProvider";
 
 export const RightNavigation = () => {
   const [anchorEl, setAnchorEl] = useState(null);
+  const { user } = useUser();
   // const user = true;
-  const user = false;
+  // const user = false;
   const handleCloseMenu = () => setAnchorEl(null);
 
   const { isDark, toggleDarkMode } = useTheme();

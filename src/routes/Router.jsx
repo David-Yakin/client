@@ -23,6 +23,7 @@ import A from "../sandbox/use-context/exeTwo/components/A";
 import Snackbar from "../sandbox/mui-sandbox/snackbar/Snackbar";
 import MuiTextField from "../sandbox/mui-textfield/MuiTextField";
 import FormTest from "../sandbox/forms/FormTest";
+import LoginPage from "./../users/pages/LoginPage";
 
 const Router = () => {
   return (
@@ -32,6 +33,7 @@ const Router = () => {
       <Route path={ROUTES.CARDS} element={<CardsPage />} />
       <Route path={`${ROUTES.CARD_INFO}/:id`} element={<CardDetailsPage />} />
       <Route path={ROUTES.SIGNUP} element={<SignupPage />} />
+      <Route path={ROUTES.LOGIN} element={<LoginPage />} />
       <Route path="/sandbox" element={<Sandbox />}>
         <Route path="fetch" element={<DataFetch />} />
         <Route path="custom-hook" element={<Counter />} />

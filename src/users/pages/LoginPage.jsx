@@ -1,7 +1,61 @@
 import React from "react";
+import Form from "../../forms/components/Form";
+import Input from "../../forms/components/Input";
+import useForm from "../../forms/hooks/useForm";
+import { Box } from "@mui/material";
+import initialLoginForm from "../helpers/initialForms/initialLoginForm";
+import loginSchema from "../models/joi-schema/loginSchema";
+import useUsers from "./../hooks/useUsers";
 
 const LoginPage = () => {
-  return <div>LoginPage</div>;
+  const { handleLogin } = useUsers();
+
+  const handleSubmit = async data => {
+    handleLogin(data);
+  };
+
+  const { value, ...rest } = useForm(
+    initialLoginForm,
+    loginSchema,
+    handleSubmit
+  );
+
+  return (
+    <Box
+      sx={{
+        paddingTop: 8,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}>
+      <Form
+        onSubmit={rest.onSubmit}
+        handleReset={rest.handleReset}
+        errors={value.errors}
+        validateForm={rest.validateForm}
+        styles={{ maxWidth: "450px" }}
+        title="login">
+        <Input
+          label="email"
+          name="email"
+          type="email"
+          error={value.errors.email}
+          required={true}
+          handleChange={rest.handleChange}
+          data={value.data}
+        />
+        <Input
+          label="password"
+          name="password"
+          type="password"
+          error={value.errors.password}
+          required={true}
+          handleChange={rest.handleChange}
+          data={value.data}
+        />
+      </Form>
+    </Box>
+  );
 };
 
 export default LoginPage;

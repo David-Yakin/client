@@ -1,5 +1,5 @@
 import { shape, string, number, arrayOf, oneOfType } from "prop-types";
-import addressType from "./addressTypye";
+import addressType from "./addressType";
 import imageType from "./imageType";
 
 const cardType = shape({

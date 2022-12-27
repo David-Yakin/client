@@ -23,7 +23,7 @@ const Form = ({
   return (
     <Box
       color={color}
-      sx={{ ...styles, mt: 2, p: { xs: 0, sm: 2 } }}
+      sx={{ ...styles, mt: 2, p: { xs: 1, sm: 2 } }}
       component="form"
       onSubmit={onSubmit}
       autoComplete="off"

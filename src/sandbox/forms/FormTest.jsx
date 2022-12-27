@@ -3,7 +3,7 @@ import Form from "../../forms/components/Form";
 import Input from "../../forms/components/Input";
 import useForm from "../../forms/hooks/useForm";
 import Joi from "joi";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 
 const FormTest = () => {
   const handleSubmit = data => {
@@ -24,7 +24,7 @@ const FormTest = () => {
       )
       .rule({
         message:
-          "The password must be at least nine characters long and contain an uppercase letter, a lowercase letter, a number and one of the following characters !@#$%^&*-",
+          "The password must be at least seven characters long and contain an uppercase letter, a lowercase letter, a number and one of the following characters !@#$%^&*-",
       })
       .required(),
   };
@@ -34,7 +34,7 @@ const FormTest = () => {
   const { value, ...rest } = useForm(INITIAL_FORM, schema, handleSubmit);
 
   return (
-    <Box
+    <Container
       sx={{
         marginTop: 8,
         display: "flex",
@@ -68,7 +68,7 @@ const FormTest = () => {
           //   sm={6}
         />
       </Form>
-    </Box>
+    </Container>
   );
 };
 

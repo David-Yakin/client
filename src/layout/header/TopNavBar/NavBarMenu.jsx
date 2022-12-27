@@ -3,8 +3,11 @@ import MenuItem from "@mui/material/MenuItem";
 import Box from "@mui/material/Box";
 import NavBarLink from "./../../../routes/NavBarLink";
 import ROUTES from "./../../../routes/routesModel";
+import useUsers from "../../../users/hooks/useUsers";
 
 export const NavBarMenu = ({ isMenuOpen, anchorEl, onCloseMenu, user }) => {
+  const { handleLogout } = useUsers();
+
   return (
     <Menu
       open={isMenuOpen}
@@ -40,7 +43,7 @@ export const NavBarMenu = ({ isMenuOpen, anchorEl, onCloseMenu, user }) => {
 
       {user && (
         <Box>
-          <MenuItem onClick={onCloseMenu}>Logout</MenuItem>
+          <MenuItem onClick={handleLogout}>Logout</MenuItem>
 
           <NavBarLink to={ROUTES.USER_PROFILE} color="#000">
             <MenuItem onClick={onCloseMenu}>Profile</MenuItem>
