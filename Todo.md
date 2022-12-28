@@ -60,44 +60,45 @@
 48. [ ] **Form component**
 49. [ ] **Input component**
 50. [ ] **FormButton component**
-51. [ ] **normalize object**
-52. [ ] **signup**
-53. [ ] **Textarea component**
-54. [ ] **Joi client side**
-55. [ ] **handle Submit**
-56. [ ] **reset Form**
-57. [ ] **onChange input**
+51. [ ] **Joi client side**
+52. [ ] **handle Submit**
+53. [ ] **reset Form**
+54. [ ] **onChange input**
+55. [ ] **Login**
+56. [ ] **jwt authorization client side**
+57. [ ] **localStorage service**
+58. [ ] **get current user**
+59. [ ] **userProvider**
+60. [ ] **logout**
+61. [ ] **MyCardsPage.jsx**
 
-58. [ ] **login**
-59. [ ] **jwt authorization client side**
-60. [ ] **localStorage service**
-61. [ ] **get current user**
-62. [ ] **userProvider**
-63. [ ] **logout**
-64. [ ] **useRef - 3 failed attempts**
+62. [ ] **useRef - 3 failed attempts**
+63. [ ] **localStorage 3 failed attempts**
+64. [ ] **signup**
 65. [ ] **useRef - focus on input**
+66. [ ] **normalize object**
 
-66. [ ] **create card**
+67. [ ] **create card**
 
-67. [ ] **biz signUp**
-68. [ ] **progress bar**
-69. [ ] **payment method**
-70. [ ] **create new business card**
-71. [ ] **my cards**
+68. [ ] **biz signUp**
+69. [ ] **progress bar**
+70. [ ] **payment method**
+71. [ ] **create new business card**
+72. [ ] **my cards**
 
-72. [ ] **delete card**
-73. [ ] **swal or Dialog in mui**
-74. [ ] **handleDelete card**
+73. [ ] **delete card**
+74. [ ] **swal or Dialog in mui**
+75. [ ] **handleDelete card**
 
-75. [ ] **edit card**
-76. [ ] **map to model**
-77. [ ] **normalize card**
+76. [ ] **edit card**
+77. [ ] **map to model**
+78. [ ] **normalize card**
 
-78. [ ] **like card**
-79. [ ] **my fav cards**
+79. [ ] **like card**
+80. [ ] **my fav cards**
 
-80. [ ] **search bar**
-81. [ ] **.ENV**
+81. [ ] **search bar**
+82. [ ] **.ENV**
 
 ## Extras
 

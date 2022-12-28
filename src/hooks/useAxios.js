@@ -1,10 +1,14 @@
 import axios from "axios";
 import { useSnackbar } from "../providers/SnackbarProvider";
 import { useEffect } from "react";
+import { useUser } from "../users/providers/UserProvider";
 
 const useAxios = () => {
   const snack = useSnackbar();
+  const { token } = useUser();
+
   useEffect(() => {
+    axios.defaults.headers.common["x-auth-token"] = token;
     if (snack) {
       axios.interceptors.request.use(data => {
         return Promise.resolve(data);
@@ -16,7 +20,7 @@ const useAxios = () => {
         return Promise.reject(error);
       });
     }
-  }, [snack]);
+  }, [snack, token]);
 };
 
 export default useAxios;
