@@ -3,7 +3,7 @@ import Form from "../../forms/components/Form";
 import Input from "../../forms/components/Input";
 import useForm from "../../forms/hooks/useForm";
 import Joi from "joi";
-import { Box, Container } from "@mui/material";
+import { Container } from "@mui/material";
 
 const FormTest = () => {
   const handleSubmit = data => {
@@ -11,25 +11,11 @@ const FormTest = () => {
   };
 
   const schema = {
-    email: Joi.string()
-      .ruleset.pattern(
-        /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/
-      )
-      .rule({ message: "Pleas enter a valid mail" })
-      .required(),
-
-    password: Joi.string()
-      .ruleset.regex(
-        /((?=.*\d{1})(?=.*[A-Z]{1})(?=.*[a-z]{1})(?=.*[!@#$%^&*-]{1}).{7,20})/
-      )
-      .rule({
-        message:
-          "The password must be at least seven characters long and contain an uppercase letter, a lowercase letter, a number and one of the following characters !@#$%^&*-",
-      })
-      .required(),
+    first: Joi.string().min(2).required(),
+    last: Joi.string().min(2).required(),
   };
 
-  const INITIAL_FORM = { email: "", password: "" };
+  const INITIAL_FORM = { first: "", last: "" };
 
   const { value, ...rest } = useForm(INITIAL_FORM, schema, handleSubmit);
 
@@ -47,29 +33,26 @@ const FormTest = () => {
         errors={value.errors}
         validateForm={rest.validateForm}
         styles={{ maxWidth: "450px" }}
-        title="sign in">
+        title="enter name">
         <Input
-          label="email"
-          name="email"
-          type="email"
-          error={value.errors.email}
-          required={true}
+          label="first"
+          name="first"
+          type="first"
+          error={value.errors.first}
           handleChange={rest.handleChange}
           data={value.data}
         />
         <Input
-          label="password"
-          name="password"
-          type="password"
-          error={value.errors.password}
-          required={true}
+          label="last"
+          name="last"
+          type="last"
+          error={value.errors.last}
           handleChange={rest.handleChange}
           data={value.data}
-          //   sm={6}
         />
       </Form>
     </Container>
   );
 };
 
-export default FormTest;
+export default React.memo(FormTest);

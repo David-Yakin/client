@@ -1,18 +1,17 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import Logo from "./Logo/Logo";
-import LogoIcon from "./Logo/LogoIcon";
-import ROUTES from "../../../routes/routesModel";
-import NavItem from "../../../routes/NavItem";
-import { useUser } from "../../../users/providers/UserProvider";
+import Logo from "../Logo/Logo";
+import LogoIcon from "../Logo/LogoIcon";
+import ROUTES from "../../../../routes/routesModel";
+import NavItem from "../../../../routes/NavItem";
+import { useUser } from "../../../../users/providers/UserProvider";
 
-export const LeftNavigation = () => {
+const LeftNavBar = () => {
   const { user } = useUser();
 
   return (
     <Box>
       <LogoIcon />
-
       <Logo />
 
       <Box sx={{ display: { xs: "none", md: "inline-flex" } }}>
@@ -28,3 +27,5 @@ export const LeftNavigation = () => {
     </Box>
   );
 };
+
+export default LeftNavBar;

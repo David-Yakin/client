@@ -1,12 +1,14 @@
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Box from "@mui/material/Box";
-import NavBarLink from "./../../../routes/NavBarLink";
-import ROUTES from "./../../../routes/routesModel";
-import useUsers from "../../../users/hooks/useUsers";
+import NavBarLink from "../../../../routes/NavBarLink";
+import ROUTES from "../../../../routes/routesModel";
+import useUsers from "../../../../users/hooks/useUsers";
+import { useUser } from "../../../../users/providers/UserProvider";
 
-export const NavBarMenu = ({ isMenuOpen, anchorEl, onCloseMenu, user }) => {
+export const NavBarMenu = ({ isMenuOpen, anchorEl, onCloseMenu }) => {
   const { handleLogout } = useUsers();
+  const { user } = useUser();
 
   return (
     <Menu

@@ -6,7 +6,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 import SearchIcon from "@mui/icons-material/Search";
 import IconButton from "@mui/material/IconButton";
 
-export const SearchBar = () => {
+const SearchBar = () => {
   return (
     <Box display="inline-flex">
       <FormControl variant="standard">
@@ -26,3 +26,5 @@ export const SearchBar = () => {
     </Box>
   );
 };
+
+export default SearchBar;

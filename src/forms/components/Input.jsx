@@ -1,35 +1,35 @@
 import React from "react";
 import { string, bool, object, func } from "prop-types";
 import TextField from "@mui/material/TextField";
-import { makeFirstLetterCapital } from "../../utils/algoMethods";
+import { makeFirstLetterCapital } from "../utils/algoMethods";
 import Grid from "@mui/material/Grid";
 
 const Input = ({
-  label,
-  name,
-  required,
-  type,
-  handleChange,
-  error,
   variant,
+  type,
+  name,
   data,
+  label,
+  required,
+  error,
+  handleChange,
   ...rest
 }) => {
   return (
     <Grid item xs={12} {...rest}>
       <TextField
         variant={variant}
+        label={makeFirstLetterCapital(label)}
         type={type}
         id={name}
         name={name}
-        label={makeFirstLetterCapital(label)}
+        value={data[name] ? data[name] : ""}
         required={required}
-        fullWidth
-        autoComplete="off"
         helperText={error}
         error={Boolean(error)}
         onChange={handleChange}
-        value={data[name] ? data[name] : ""}
+        fullWidth
+        autoComplete="off"
       />
     </Grid>
   );

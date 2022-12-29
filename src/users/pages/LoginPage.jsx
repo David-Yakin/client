@@ -10,14 +10,10 @@ import useUsers from "./../hooks/useUsers";
 const LoginPage = () => {
   const { handleLogin } = useUsers();
 
-  const handleSubmit = async data => {
-    handleLogin(data);
-  };
-
   const { value, ...rest } = useForm(
     initialLoginForm,
     loginSchema,
-    handleSubmit
+    handleLogin
   );
 
   return (
@@ -40,7 +36,6 @@ const LoginPage = () => {
           name="email"
           type="email"
           error={value.errors.email}
-          required={true}
           handleChange={rest.handleChange}
           data={value.data}
         />
@@ -49,7 +44,6 @@ const LoginPage = () => {
           name="password"
           type="password"
           error={value.errors.password}
-          required={true}
           handleChange={rest.handleChange}
           data={value.data}
         />
@@ -58,4 +52,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default React.memo(LoginPage);
