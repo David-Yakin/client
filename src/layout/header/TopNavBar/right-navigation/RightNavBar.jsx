@@ -3,7 +3,7 @@ import IconButton from "@mui/material/IconButton";
 import Box from "@mui/material/Box";
 import SearchBar from "./SearchBar";
 import { NavBarMenu } from "./NavBarMenu";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { useTheme } from "../../../../providers/ThemeProvider";
@@ -11,11 +11,21 @@ import { useUser } from "../../../../users/providers/UserProvider";
 import MoreButton from "./MoreButton";
 import Logged from "./Logged";
 import NotLogged from "./NotLogged";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme as useMuiTheme } from "@mui/material/styles";
+
+const noop = () => {};
 
 const RightNavBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const { user } = useUser();
   const handleCloseMenu = () => setAnchorEl(null);
+  const theme = useMuiTheme();
+  const withAvatar = useMediaQuery(theme.breakpoints.up("md"));
+
+  useEffect(() => {
+    setAnchorEl(null);
+  }, [withAvatar]);
 
   const { isDark, toggleDarkMode } = useTheme();
 
@@ -30,10 +40,10 @@ const RightNavBar = () => {
 
         {!user && <NotLogged />}
 
-        {user && <Logged setAnchorEl={setAnchorEl} />}
+        {user && <Logged onClick={withAvatar ? setAnchorEl : noop} />}
       </Box>
 
-      <MoreButton setAnchorEl={setAnchorEl} />
+      <MoreButton onClick={withAvatar ? noop : setAnchorEl} />
 
       <NavBarMenu
         isMenuOpen={Boolean(anchorEl)}
