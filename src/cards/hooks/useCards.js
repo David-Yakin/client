@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   getCards,
   getCard,
@@ -10,12 +10,26 @@ import {
 } from "./../services/cardService";
 import useAxios from "../../hooks/useAxios";
 import { useSnackbar } from "../../providers/SnackbarProvider";
+import { useSearchParams } from "react-router-dom";
 
 const useCards = () => {
   const [cards, setCards] = useState(null);
   const [card, setCard] = useState(null);
+  const [query, setQuery] = useState("");
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [filteredCards, setFilterCards] = useState(null);
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    setQuery(searchParams.get("q"));
+  }, [searchParams]);
+
+  useEffect(() => {
+    if (cards) {
+      setFilterCards(cards.filter(card => card.title.includes(query)));
+    }
+  }, [cards, query]);
 
   useAxios();
   const snack = useSnackbar();
@@ -105,6 +119,7 @@ const useCards = () => {
   return {
     card,
     cards,
+    filteredCards,
     isLoading,
     error,
     handleGetCard,
