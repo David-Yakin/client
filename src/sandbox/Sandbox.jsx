@@ -23,6 +23,7 @@ const Sandbox = () => {
           <NavItem label="snackbar" to="snackbar" color="black" />
           <NavItem label="textfield" to="text-field" color="black" />
           <NavItem label="form" to="form" color="black" />
+          <NavItem label="bottom nav" to="bottom-nav" color="black" />
         </Toolbar>
       </AppBar>
 

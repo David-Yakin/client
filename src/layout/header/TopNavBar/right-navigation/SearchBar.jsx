@@ -22,7 +22,7 @@ const SearchBar = () => {
           sx={{ backgroundColor: "#e3f2fd" }}
           placeholder="Search"
           size="small"
-          value={searchParams.get("q")}
+          value={searchParams.get("q") ?? ""}
           onChange={handleChange}
           endAdornment={
             <InputAdornment position="end">

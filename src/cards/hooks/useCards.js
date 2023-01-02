@@ -22,9 +22,10 @@ const useCards = () => {
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    setQuery(searchParams.get("q"));
+    setQuery(searchParams.get("q") ?? "");
   }, [searchParams]);
 
+  // להוסיף
   useEffect(() => {
     if (cards) {
       setFilterCards(cards.filter(card => card.title.includes(query)));

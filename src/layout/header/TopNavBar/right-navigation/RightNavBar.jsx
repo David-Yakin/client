@@ -18,10 +18,11 @@ const noop = () => {};
 
 const RightNavBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
-  const { user } = useUser();
-  const handleCloseMenu = () => setAnchorEl(null);
   const theme = useMuiTheme();
   const withAvatar = useMediaQuery(theme.breakpoints.up("md"));
+
+  const { user } = useUser();
+  const handleCloseMenu = () => setAnchorEl(null);
 
   useEffect(() => {
     setAnchorEl(null);
