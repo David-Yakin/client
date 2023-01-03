@@ -11,6 +11,9 @@ import {
 import useAxios from "../../hooks/useAxios";
 import { useSnackbar } from "../../providers/SnackbarProvider";
 import { useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import ROUTES from "../../routes/routesModel";
+import normalizeCard from "../helpers/normalization/normalizeCard";
 
 const useCards = () => {
   const [cards, setCards] = useState(null);
@@ -20,6 +23,8 @@ const useCards = () => {
   const [error, setError] = useState(null);
   const [filteredCards, setFilterCards] = useState(null);
   const [searchParams] = useSearchParams();
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     setQuery(searchParams.get("q") ?? "");
@@ -75,9 +80,11 @@ const useCards = () => {
   const handleCreateCard = async cardFromClient => {
     try {
       setLoading(true);
-      const card = await createCard(cardFromClient);
+      const normalizedCard = normalizeCard(cardFromClient);
+      const card = await createCard(normalizedCard);
       requestStatus(false, null, null, card);
       snack("success", "A new business card has been created");
+      navigate(ROUTES.MY_CARDS);
     } catch (error) {
       requestStatus(false, error, null);
     }
