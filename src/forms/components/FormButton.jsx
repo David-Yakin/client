@@ -1,9 +1,9 @@
 import React from "react";
-import { string, bool } from "prop-types";
+import { string, bool, node } from "prop-types";
 import Button from "@mui/material/Button";
 
 const FormButton = ({
-  text,
+  node,
   color,
   variant,
   component,
@@ -20,13 +20,13 @@ const FormButton = ({
       disabled={disabled}
       fullWidth
       size={size}>
-      {text}
+      {node}
     </Button>
   );
 };
 
 FormButton.propTypes = {
-  text: string.isRequired,
+  node: node.isRequired,
   color: string.isRequired,
   variant: string.isRequired,
   component: string.isRequired,

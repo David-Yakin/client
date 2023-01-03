@@ -2,12 +2,16 @@ import React from "react";
 import Form from "../../forms/components/Form";
 import Input from "../../forms/components/Input";
 import useForm from "../../forms/hooks/useForm";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import initialLoginForm from "../helpers/initialForms/initialLoginForm";
 import loginSchema from "../models/joi-schema/loginSchema";
 import useUsers from "./../hooks/useUsers";
+import { useUser } from "../providers/UserProvider";
+import { Navigate } from "react-router-dom";
+import ROUTES from "../../routes/routesModel";
 
 const LoginPage = () => {
+  const { user } = useUser();
   const { handleLogin } = useUsers();
 
   const { value, ...rest } = useForm(
@@ -16,8 +20,10 @@ const LoginPage = () => {
     handleLogin
   );
 
+  if (user) return <Navigate replace to={ROUTES.CARDS} />;
+
   return (
-    <Box
+    <Container
       sx={{
         paddingTop: 8,
         display: "flex",
@@ -48,7 +54,7 @@ const LoginPage = () => {
           data={value.data}
         />
       </Form>
-    </Box>
+    </Container>
   );
 };
 

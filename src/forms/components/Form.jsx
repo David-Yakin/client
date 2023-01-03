@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import FormButton from "./FormButton";
 import { useNavigate } from "react-router-dom";
 import Typography from "@mui/material/Typography";
-
+import LoopIcon from "@mui/icons-material/Loop";
 const Form = ({
   onSubmit,
   children,
@@ -35,10 +35,10 @@ const Form = ({
       <Grid container spacing={spacing}>
         {children}
       </Grid>
-      <Grid container spacing={1} my={2} direction="row">
+      <Grid container spacing={1} my={2} direction="row" width="100">
         <Grid item xs={12} sm={6}>
           <FormButton
-            text="cancel"
+            node="cancel"
             color="error"
             component="div"
             variant="outlined"
@@ -47,7 +47,7 @@ const Form = ({
         </Grid>
         <Grid item xs={12} sm={6}>
           <FormButton
-            text="reset"
+            node={<LoopIcon />}
             variant="outlined"
             component="div"
             handleClick={handleReset}
@@ -55,7 +55,7 @@ const Form = ({
         </Grid>
         <Grid item xs={12}>
           <FormButton
-            text="Submit"
+            node="Submit"
             handleClick={onSubmit}
             disabled={!!validateForm()}
             size="large"

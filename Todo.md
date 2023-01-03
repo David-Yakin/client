@@ -71,48 +71,41 @@
 59. [ ] **userProvider**
 60. [ ] **logout**
 
-61. [ ] **MyCardsPage.jsx**
+61. [ ] **signup**
+62. [ ] **normalize object**
+63. [ ] **biz signUp**
 
-62. [ ] **useRef - 3 failed attempts**
-63. [ ] **localStorage 3 failed attempts**
-64. [ ] **signup**
-65. [ ] **useRef - focus on input**
-66. [ ] **normalize object**
+64. [ ] **create new business card**
+65. [ ] **MyCardsPage.jsx**
 
-67. [ ] **create card**
+66. [ ] **delete card**
+67. [ ] **swal or Dialog in mui**
+68. [ ] **handleDelete card**
 
-68. [ ] **biz signUp**
-69. [ ] **progress bar**
-70. [ ] **payment method**
-71. [ ] **create new business card**
-72. [ ] **my cards**
+69. [ ] **edit card**
+70. [ ] **map to model**
 
-73. [ ] **delete card**
-74. [ ] **swal or Dialog in mui**
-75. [ ] **handleDelete card**
+71. [ ] **like card**
+72. [ ] **my fav cards**
 
-76. [ ] **edit card**
-77. [ ] **map to model**
-78. [ ] **normalize card**
-
-79. [ ] **like card**
-80. [ ] **my fav cards**
-
-81. [ ] **search bar**
-82. [ ] **.ENV**
+73. [ ] **search bar**
+74. [ ] **.ENV**
+75. [ ] **adding initialUsers to the server in w020921e & W031121er**
 
 ## Extras
 
-79. [ ] **display mode & toggle button in mui**
-80. [ ] **tests**
+1.  [ ] **useRef - 3 failed attempts**
+2.  [ ] **localStorage 3 failed attempts**
+3.  [ ] **display mode & toggle button in mui**
+4.  [ ] **tests**
 
 ## MUI
 
-1.  [ ] **Cards**
+1.  [x] **Cards**
 2.  [x] **Layout**
-3.  [ ] **navigation**
-4.  [ ] **App bar**
-5.  [ ] **Bottom navigation**
+3.  [x] **navigation**
+4.  [x] **App bar**
+5.  [x] **Bottom navigation**
 6.  [ ] **Form & Inputs**
 
 7.  [ ] **installing fantazi font**
