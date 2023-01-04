@@ -50,11 +50,17 @@ import Error from "../../components/Error";
 import Spinner from "../../components/Spinner";
 
 const CardsPage = () => {
-  const { isLoading, error, filteredCards, handleGetCards } = useCards();
+  const { isLoading, error, filteredCards, handleGetCards, handleDeleteCard } =
+    useCards();
 
   useEffect(() => {
     handleGetCards();
   }, []);
+
+  const onDeleteCard = async cardId => {
+    await handleDeleteCard(cardId);
+    await handleGetCards();
+  };
 
   const hasCards = !!filteredCards?.length;
   return (
@@ -71,7 +77,7 @@ const CardsPage = () => {
           parameters you entered
         </p>
       )}
-      {hasCards && <Cards cards={filteredCards} />}
+      {hasCards && <Cards cards={filteredCards} onDelete={onDeleteCard} />}
     </Container>
   );
 };

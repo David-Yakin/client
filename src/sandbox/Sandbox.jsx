@@ -24,6 +24,7 @@ const Sandbox = () => {
           <NavItem label="textfield" to="text-field" color="black" />
           <NavItem label="form" to="form" color="black" />
           <NavItem label="bottom nav" to="bottom-nav" color="black" />
+          <NavItem label="dialog" to="dialog" color="black" />
         </Toolbar>
       </AppBar>
 

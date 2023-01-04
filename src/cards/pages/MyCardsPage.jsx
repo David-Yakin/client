@@ -12,7 +12,8 @@ import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 
 const MyCardsPage = () => {
-  const { isLoading, error, cards, handleGetMyCards } = useCards();
+  const { isLoading, error, cards, handleGetMyCards, handleDeleteCard } =
+    useCards();
   const { user } = useUser();
   const navigate = useNavigate();
 
@@ -20,6 +21,11 @@ const MyCardsPage = () => {
     if (!user) navigate(ROUTES.CARDS);
     else handleGetMyCards();
   }, [user]);
+
+  const onDeleteCard = async cardId => {
+    await handleDeleteCard(cardId);
+    await handleGetMyCards();
+  };
 
   return (
     <Container sx={{ position: "relative", minHeight: "92vh" }}>
@@ -54,7 +60,9 @@ const MyCardsPage = () => {
           </p>
         </>
       )}
-      {cards && !!cards.length && <Cards cards={cards} />}
+      {cards && !!cards.length && (
+        <Cards cards={cards} onDelete={onDeleteCard} />
+      )}
     </Container>
   );
 };

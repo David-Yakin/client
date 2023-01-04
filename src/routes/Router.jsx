@@ -27,6 +27,7 @@ import LoginPage from "./../users/pages/LoginPage";
 import MyCardsPage from "../cards/pages/MyCardsPage";
 import MuiBottomNavigators from "../sandbox/layout/footer/MuiBottomNavigators";
 import CreateCardPage from "../cards/pages/CreateCardPage";
+import MuiDialog from "../sandbox/mui-sandbox/Dialog/MuiDialog";
 
 const Router = () => {
   return (
@@ -54,6 +55,7 @@ const Router = () => {
         <Route path="text-field" element={<MuiTextField />} />
         <Route path="form" element={<FormTest />} />
         <Route path="bottom-nav" element={<MuiBottomNavigators />} />
+        <Route path="dialog" element={<MuiDialog />} />
         <Route path="use-context" element={<UseContext />}>
           <Route path="exe-one" element={<ThemeProvider />} />
           <Route path="exe-two" element={<A />} />

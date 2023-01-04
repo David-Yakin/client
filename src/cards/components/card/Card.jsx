@@ -9,7 +9,7 @@ import { func } from "prop-types";
 import { useNavigate } from "react-router-dom";
 import ROUTES from "./../../../routes/routesModel";
 
-const CardComponent = ({ card, handleCardDelete }) => {
+const CardComponent = ({ card, onDeleteCard }) => {
   const navigate = useNavigate();
 
   return (
@@ -19,17 +19,14 @@ const CardComponent = ({ card, handleCardDelete }) => {
         <CardHead image={card.image} />
         <CardBody card={card} />
       </CardActionArea>
-      <CardActionBar
-        handleCardDelete={handleCardDelete}
-        bizNumber={card.bizNumber}
-      />
+      <CardActionBar onDeleteCard={onDeleteCard} cardId={card._id} />
     </Card>
   );
 };
 
 CardComponent.propTypes = {
   card: cardType.isRequired,
-  handleCardDelete: func.isRequired,
+  onDeleteCard: func.isRequired,
 };
 
 export default CardComponent;

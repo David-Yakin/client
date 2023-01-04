@@ -79,7 +79,7 @@
 65. [ ] **MyCardsPage.jsx**
 
 66. [ ] **delete card**
-67. [ ] **swal or Dialog in mui**
+67. [ ] **Dialog in mui**
 68. [ ] **handleDelete card**
 
 69. [ ] **edit card**

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
   getCards,
   getCard,
@@ -47,7 +47,7 @@ const useCards = () => {
     setError(errorMessage);
   };
 
-  const handleGetCards = async () => {
+  const handleGetCards = useCallback(async () => {
     try {
       setLoading(true);
       const cards = await getCards();
@@ -55,9 +55,9 @@ const useCards = () => {
     } catch (error) {
       requestStatus(false, error, null);
     }
-  };
+  }, []);
 
-  const handleGetCard = async cardId => {
+  const handleGetCard = useCallback(async cardId => {
     try {
       setLoading(true);
       const card = await getCard(cardId);
@@ -65,9 +65,9 @@ const useCards = () => {
     } catch (error) {
       requestStatus(false, error, null);
     }
-  };
+  }, []);
 
-  const handleGetMyCards = async () => {
+  const handleGetMyCards = useCallback(async () => {
     try {
       setLoading(true);
       const cards = await getMyCards();
@@ -75,45 +75,52 @@ const useCards = () => {
     } catch (error) {
       requestStatus(false, error, null);
     }
-  };
+  }, []);
 
-  const handleCreateCard = async cardFromClient => {
-    try {
-      setLoading(true);
-      const normalizedCard = normalizeCard(cardFromClient);
-      const card = await createCard(normalizedCard);
-      requestStatus(false, null, null, card);
-      snack("success", "A new business card has been created");
-      navigate(ROUTES.MY_CARDS);
-    } catch (error) {
-      requestStatus(false, error, null);
-    }
-  };
+  const handleCreateCard = useCallback(
+    async cardFromClient => {
+      try {
+        setLoading(true);
+        const normalizedCard = normalizeCard(cardFromClient);
+        const card = await createCard(normalizedCard);
+        requestStatus(false, null, null, card);
+        snack("success", "A new business card has been created");
+        navigate(ROUTES.MY_CARDS);
+      } catch (error) {
+        requestStatus(false, error, null);
+      }
+    },
+    [snack]
+  );
 
-  const handleUpdateCard = async cardFromClient => {
-    try {
-      setLoading(true);
-      const card = await editCard(cardFromClient);
-      requestStatus(false, null, null, card);
-      snack("success", "The business card has been successfully updated");
-    } catch (error) {
-      requestStatus(false, error, null);
-    }
-  };
+  const handleUpdateCard = useCallback(
+    async cardFromClient => {
+      try {
+        setLoading(true);
+        const card = await editCard(cardFromClient);
+        requestStatus(false, null, null, card);
+        snack("success", "The business card has been successfully updated");
+      } catch (error) {
+        requestStatus(false, error, null);
+      }
+    },
+    [snack]
+  );
 
-  const handleDeleteCard = async cardId => {
-    try {
-      setLoading(true);
-      const card = await deleteCard(cardId);
-      const cards = await getCards();
-      requestStatus(false, null, cards, card);
-      snack("success", "The business card has been successfully deleted");
-    } catch (error) {
-      requestStatus(false, error, null);
-    }
-  };
+  const handleDeleteCard = useCallback(
+    async cardId => {
+      try {
+        setLoading(true);
+        await deleteCard(cardId);
+        snack("success", "The business card has been successfully deleted");
+      } catch (error) {
+        requestStatus(false, error, null);
+      }
+    },
+    [snack]
+  );
 
-  const handleLikeCard = async cardId => {
+  const handleLikeCard = useCallback(async cardId => {
     try {
       setLoading(true);
       const card = await changeLikeStatus(cardId);
@@ -122,7 +129,7 @@ const useCards = () => {
     } catch (error) {
       requestStatus(false, error, null);
     }
-  };
+  }, []);
 
   return {
     card,

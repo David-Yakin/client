@@ -3,11 +3,9 @@ import React from "react";
 import CardComponent from "./card/Card";
 import { arrayOf } from "prop-types";
 import cardType from "../models/types/cardType";
+// import useCards from "./../hooks/useCards";
 
-const Cards = ({ cards }) => {
-  const handleCardDelete = bizNumber =>
-    console.log(`You deleted card no: ${bizNumber}`);
-
+const Cards = ({ cards, onDelete }) => {
   if (!cards.length)
     return (
       <Typography m={2}>
@@ -19,7 +17,7 @@ const Cards = ({ cards }) => {
     <Grid container spacing={2} pb={2}>
       {cards.map((card, i) => (
         <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
-          <CardComponent card={card} handleCardDelete={handleCardDelete} />
+          <CardComponent card={card} onDeleteCard={onDelete} />
         </Grid>
       ))}
     </Grid>
