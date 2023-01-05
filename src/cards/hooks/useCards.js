@@ -62,6 +62,7 @@ const useCards = () => {
       setLoading(true);
       const card = await getCard(cardId);
       requestStatus(false, null, null, card);
+      return card;
     } catch (error) {
       requestStatus(false, error, null);
     }
@@ -94,12 +95,13 @@ const useCards = () => {
   );
 
   const handleUpdateCard = useCallback(
-    async cardFromClient => {
+    async (cardId, cardFromClient) => {
       try {
         setLoading(true);
-        const card = await editCard(cardFromClient);
+        const card = await editCard(cardId, cardFromClient);
         requestStatus(false, null, null, card);
         snack("success", "The business card has been successfully updated");
+        navigate(ROUTES.MY_CARDS);
       } catch (error) {
         requestStatus(false, error, null);
       }

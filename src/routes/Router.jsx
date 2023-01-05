@@ -28,6 +28,7 @@ import MyCardsPage from "../cards/pages/MyCardsPage";
 import MuiBottomNavigators from "../sandbox/layout/footer/MuiBottomNavigators";
 import CreateCardPage from "../cards/pages/CreateCardPage";
 import MuiDialog from "../sandbox/mui-sandbox/Dialog/MuiDialog";
+import EditCardPage from "../cards/pages/EditCardPage";
 
 const Router = () => {
   return (
@@ -37,6 +38,7 @@ const Router = () => {
       <Route path={ROUTES.CARDS} element={<CardsPage />} />
       <Route path={`${ROUTES.CARD_INFO}/:id`} element={<CardDetailsPage />} />
       <Route path={ROUTES.CREATE_CARD} element={<CreateCardPage />} />
+      <Route path={`${ROUTES.EDIT_CARD}/:id`} element={<EditCardPage />} />
       <Route path={ROUTES.MY_CARDS} element={<MyCardsPage />} />
       <Route path={ROUTES.SIGNUP} element={<SignupPage />} />
       <Route path={ROUTES.LOGIN} element={<LoginPage />} />

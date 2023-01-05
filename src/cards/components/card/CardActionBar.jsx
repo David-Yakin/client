@@ -8,9 +8,12 @@ import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import { func, string } from "prop-types";
 import CallIcon from "@mui/icons-material/Call";
 import CardDeleteDialog from "./CardDeleteDialog";
+import { useNavigate } from "react-router-dom";
+import ROUTES from "../../../routes/routesModel";
 
 const CardActionBar = ({ onDeleteCard, cardId }) => {
   const [isDialogOpen, setDialog] = useState(false);
+  const navigate = useNavigate();
 
   const handleDialog = term => {
     if (term === "open") return setDialog(true);
@@ -29,13 +32,13 @@ const CardActionBar = ({ onDeleteCard, cardId }) => {
         sx={{ paddingTop: 0, justifyContent: "space-between" }}>
         <Box>
           <IconButton
-            aria-label="add to favorites"
+            aria-label="delete card"
             onClick={() => handleDialog("open")}>
             <DeleteIcon />
           </IconButton>
           <IconButton
-            aria-label="add to favorites"
-            onClick={() => console.log(`You edit card no: ${cardId}`)}>
+            aria-label="edit card"
+            onClick={() => navigate(`${ROUTES.EDIT_CARD}/${cardId}`)}>
             <ModeEditIcon />
           </IconButton>
         </Box>
