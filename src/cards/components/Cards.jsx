@@ -3,7 +3,6 @@ import React from "react";
 import CardComponent from "./card/Card";
 import { arrayOf } from "prop-types";
 import cardType from "../models/types/cardType";
-// import useCards from "./../hooks/useCards";
 
 const Cards = ({ cards, onDelete }) => {
   if (!cards.length)

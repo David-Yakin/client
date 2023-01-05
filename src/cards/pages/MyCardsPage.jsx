@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import ROUTES from "../../routes/routesModel";
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
+import CardsFeedback from "../components/CardsFeedback";
 
 const MyCardsPage = () => {
   const { isLoading, error, cards, handleGetMyCards, handleDeleteCard } =
@@ -32,9 +33,7 @@ const MyCardsPage = () => {
       <PageHeader
         title="Cards"
         subtitle="Here you can find business cards from all categories"
-      />
-      {isLoading && <Spinner />}
-      {error && <Error errorMessage={error} />}
+      />{" "}
       {cards && (
         <Fab
           onClick={() => navigate(ROUTES.CREATE_CARD)}
@@ -48,21 +47,12 @@ const MyCardsPage = () => {
           <AddIcon />
         </Fab>
       )}
-      {cards && !cards.length && (
-        <>
-          <p>
-            Oops, there are no business cards in the database that match the
-            parameters you entered.
-          </p>
-          <p>
-            You are welcome to click the plus button and create a new business
-            card
-          </p>
-        </>
-      )}
-      {cards && !!cards.length && (
-        <Cards cards={cards} onDelete={onDeleteCard} />
-      )}
+      <CardsFeedback
+        isLoading={isLoading}
+        error={error}
+        cards={cards}
+        onDelete={onDeleteCard}
+      />
     </Container>
   );
 };
