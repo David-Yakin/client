@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import CardActions from "@mui/material/CardActions";
 import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -11,11 +11,22 @@ import CardDeleteDialog from "./CardDeleteDialog";
 import { useNavigate } from "react-router-dom";
 import ROUTES from "../../../routes/routesModel";
 import { useUser } from "../../../users/providers/UserProvider";
+import useCards from "../../hooks/useCards";
 
-const CardActionBar = ({ onDeleteCard, cardId, cardUserId }) => {
+const CardActionBar = ({
+  onDeleteCard,
+  cardId,
+  cardUserId,
+  cardLikes,
+  onLike,
+}) => {
   const [isDialogOpen, setDialog] = useState(false);
   const navigate = useNavigate();
   const { user } = useUser();
+  const { handleLikeCard } = useCards();
+  const [isLiked, setLike] = useState(
+    () => !!cardLikes.find(id => id === user._id)
+  );
 
   const handleDialog = term => {
     if (term === "open") return setDialog(true);
@@ -25,6 +36,12 @@ const CardActionBar = ({ onDeleteCard, cardId, cardUserId }) => {
   const handelDeleteCard = () => {
     handleDialog();
     onDeleteCard(cardId);
+  };
+
+  const handelLike = async () => {
+    setLike(prev => !prev);
+    await handleLikeCard(cardId);
+    onLike();
   };
 
   return (
@@ -57,10 +74,8 @@ const CardActionBar = ({ onDeleteCard, cardId, cardUserId }) => {
             <CallIcon />
           </IconButton>
           {user && (
-            <IconButton
-              aria-label="add to favorites"
-              onClick={() => console.log(`You Liked card no: ${cardId}`)}>
-              <FavoriteIcon />
+            <IconButton aria-label="add to favorites" onClick={handelLike}>
+              <FavoriteIcon color={isLiked ? "error" : "inherit"} />
             </IconButton>
           )}
         </Box>
@@ -78,6 +93,7 @@ const CardActionBar = ({ onDeleteCard, cardId, cardUserId }) => {
 CardActionBar.propTypes = {
   cardId: string.isRequired,
   onDeleteCard: func.isRequired,
+  onLike: func.isRequired,
 };
 
-export default CardActionBar;
+export default React.memo(CardActionBar);

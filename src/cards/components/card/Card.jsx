@@ -8,10 +8,8 @@ import cardType from "../../models/types/cardType";
 import { func } from "prop-types";
 import { useNavigate } from "react-router-dom";
 import ROUTES from "./../../../routes/routesModel";
-import { useUser } from "../../../users/providers/UserProvider";
 
-const CardComponent = ({ card, onDeleteCard }) => {
-  const { user } = useUser();
+const CardComponent = ({ card, onDeleteCard, onLike }) => {
   const navigate = useNavigate();
   return (
     <Card sx={{ minWidth: 280 }}>
@@ -24,6 +22,8 @@ const CardComponent = ({ card, onDeleteCard }) => {
         onDeleteCard={onDeleteCard}
         cardId={card._id}
         cardUserId={card.user_id}
+        cardLikes={card.likes}
+        onLike={onLike}
       />
     </Card>
   );
@@ -34,4 +34,4 @@ CardComponent.propTypes = {
   onDeleteCard: func.isRequired,
 };
 
-export default CardComponent;
+export default React.memo(CardComponent);

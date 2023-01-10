@@ -14,6 +14,7 @@ import { useSearchParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import ROUTES from "../../routes/routesModel";
 import normalizeCard from "../helpers/normalization/normalizeCard";
+import { useUser } from "../../users/providers/UserProvider";
 
 const useCards = () => {
   const [cards, setCards] = useState(null);
@@ -23,6 +24,8 @@ const useCards = () => {
   const [error, setError] = useState(null);
   const [filteredCards, setFilterCards] = useState(null);
   const [searchParams] = useSearchParams();
+
+  const { user } = useUser();
 
   const navigate = useNavigate();
 
@@ -52,6 +55,7 @@ const useCards = () => {
       setLoading(true);
       const cards = await getCards();
       requestStatus(false, null, cards);
+      return cards;
     } catch (error) {
       requestStatus(false, error, null);
     }
@@ -62,7 +66,7 @@ const useCards = () => {
       setLoading(true);
       const card = await getCard(cardId);
       requestStatus(false, null, null, card);
-      return card;
+      // return card;
     } catch (error) {
       requestStatus(false, error, null);
     }
@@ -78,6 +82,19 @@ const useCards = () => {
     }
   }, []);
 
+  const handleGetFavCards = useCallback(async () => {
+    try {
+      setLoading(true);
+      const cards = await handleGetCards();
+      const favCards = cards.filter(
+        card => !!card.likes.find(id => id === user._id)
+      );
+      requestStatus(false, null, favCards);
+    } catch (error) {
+      requestStatus(false, error, null);
+    }
+  }, [user]);
+
   const handleCreateCard = useCallback(
     async cardFromClient => {
       try {
@@ -86,21 +103,6 @@ const useCards = () => {
         const card = await createCard(normalizedCard);
         requestStatus(false, null, null, card);
         snack("success", "A new business card has been created");
-        navigate(ROUTES.MY_CARDS);
-      } catch (error) {
-        requestStatus(false, error, null);
-      }
-    },
-    [snack]
-  );
-
-  const handleUpdateCard = useCallback(
-    async (cardId, cardFromClient) => {
-      try {
-        setLoading(true);
-        const card = await editCard(cardId, cardFromClient);
-        requestStatus(false, null, null, card);
-        snack("success", "The business card has been successfully updated");
         navigate(ROUTES.MY_CARDS);
       } catch (error) {
         requestStatus(false, error, null);
@@ -122,11 +124,25 @@ const useCards = () => {
     [snack]
   );
 
+  const handleUpdateCard = useCallback(
+    async (cardId, cardFromClient) => {
+      try {
+        setLoading(true);
+        const card = await editCard(cardId, cardFromClient);
+        requestStatus(false, null, null, card);
+        console.log(card);
+        snack("success", "The business card has been successfully updated");
+        navigate(ROUTES.MY_CARDS);
+      } catch (error) {
+        requestStatus(false, error, null);
+      }
+    },
+    [snack]
+  );
+
   const handleLikeCard = useCallback(async cardId => {
     try {
-      setLoading(true);
       const card = await changeLikeStatus(cardId);
-      const cards = await getCards();
       requestStatus(false, null, cards, card);
     } catch (error) {
       requestStatus(false, error, null);
@@ -134,8 +150,8 @@ const useCards = () => {
   }, []);
 
   return {
-    card,
     cards,
+    card,
     filteredCards,
     isLoading,
     error,
@@ -146,6 +162,8 @@ const useCards = () => {
     handleGetMyCards,
     handleUpdateCard,
     handleLikeCard,
+    setCards,
+    handleGetFavCards,
   };
 };
 

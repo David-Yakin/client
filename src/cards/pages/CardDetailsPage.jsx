@@ -27,7 +27,7 @@ const CardDetailsPage = () => {
       {error && <Error errorMessage={error} />}
       {card && (
         <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <CardComponent card={card} handleCardDelete={() => {}} />
+          <CardComponent card={card} onDeleteCard={() => {}} />
         </Box>
       )}
     </Container>
