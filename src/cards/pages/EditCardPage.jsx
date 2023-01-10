@@ -4,7 +4,7 @@ import initialCreateCardForm from "../helpers/initialForms/initialCreateCardForm
 import cardSchema from "../models/joi-schema/cardSchema";
 import useCards from "../hooks/useCards";
 import { useUser } from "../../users/providers/UserProvider";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 import ROUTES from "../../routes/routesModel";
 import { Container } from "@mui/material";
 import Form from "../../forms/components/Form";
@@ -18,6 +18,7 @@ const EditCardPage = () => {
 
   const { user } = useUser();
   const { id } = useParams();
+  const navigate = useNavigate();
   const { value, ...rest } = useForm(initialCreateCardForm, cardSchema, () =>
     handleUpdateCard(card._id, {
       ...normalizeCard({ ...value.data }),
@@ -25,15 +26,16 @@ const EditCardPage = () => {
       user_id: card.user_id,
     })
   );
-  const navigate = useNavigate();
 
   useEffect(() => {
     handleGetCard(id).then(data => {
+      if (user._id !== data.user_id) navigate(ROUTES.CARDS);
       const modeledCard = mapCardToModel(data);
       rest.setData(modeledCard);
-      if (user._id !== data.user_id) navigate(ROUTES.CARDS);
     });
   }, []);
+
+  if (!user) return <Navigate replace to={ROUTES.CARDS} />;
 
   return (
     <Container

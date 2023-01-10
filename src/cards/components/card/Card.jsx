@@ -8,10 +8,11 @@ import cardType from "../../models/types/cardType";
 import { func } from "prop-types";
 import { useNavigate } from "react-router-dom";
 import ROUTES from "./../../../routes/routesModel";
+import { useUser } from "../../../users/providers/UserProvider";
 
 const CardComponent = ({ card, onDeleteCard }) => {
+  const { user } = useUser();
   const navigate = useNavigate();
-
   return (
     <Card sx={{ minWidth: 280 }}>
       <CardActionArea
@@ -19,7 +20,11 @@ const CardComponent = ({ card, onDeleteCard }) => {
         <CardHead image={card.image} />
         <CardBody card={card} />
       </CardActionArea>
-      <CardActionBar onDeleteCard={onDeleteCard} cardId={card._id} />
+      <CardActionBar
+        onDeleteCard={onDeleteCard}
+        cardId={card._id}
+        cardUserId={card.user_id}
+      />
     </Card>
   );
 };

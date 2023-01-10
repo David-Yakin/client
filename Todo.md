@@ -98,6 +98,7 @@
 2.  [ ] **localStorage 3 failed attempts**
 3.  [ ] **display mode & toggle button in mui**
 4.  [ ] **tests**
+5.  [ ] **לתקן את משימת ריאקט רווטר דום**
 
 ## MUI
 
